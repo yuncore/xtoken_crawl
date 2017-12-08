@@ -1,0 +1,472 @@
+2017-11-23 16:23:14 [scrapy.utils.log] INFO: Scrapy 1.4.0 started (bot: NeoScrapy)
+2017-11-23 16:23:14 [scrapy.utils.log] INFO: Overridden settings: {'DOWNLOAD_DELAY': 0.25, 'SPIDER_MODULES': ['NeoScrapy.spiders'], 'AUTOTHROTTLE_START_DELAY': 0, 'AUTOTHROTTLE_DEBUG': True, 'LOG_FILE': 'logs/scrapy.log', 'COOKIES_ENABLED': False, 'BOT_NAME': 'NeoScrapy', 'AUTOTHROTTLE_ENABLED': True, 'CONCURRENT_REQUESTS_PER_DOMAIN': 16, 'AUTOTHROTTLE_MAX_DELAY': 1, 'CONCURRENT_REQUESTS_PER_IP': 16, 'NEWSPIDER_MODULE': 'NeoScrapy.spiders', 'LOG_LEVEL': 'INFO', 'CONCURRENT_REQUESTS': 32}
+2017-11-23 16:23:14 [scrapy.middleware] INFO: Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.logstats.LogStats',
+ 'scrapy.extensions.throttle.AutoThrottle',
+ 'scrapy.extensions.telnet.TelnetConsole']
+2017-11-23 16:23:14 [scrapy.middleware] INFO: Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2017-11-23 16:23:14 [scrapy.middleware] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2017-11-23 16:23:14 [scrapy.middleware] INFO: Enabled item pipelines:
+['NeoScrapy.pipelines.MongoPipeline']
+2017-11-23 16:23:14 [scrapy.core.engine] INFO: Spider opened
+2017-11-23 16:23:14 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2017-11-23 16:23:27 [scrapy.extensions.throttle] INFO: slot: tokenmarket.net | conc: 1 | delay: 1000 ms (+750) | latency:10794 ms | size: 14444 bytes
+2017-11-23 16:23:28 [scrapy.extensions.throttle] INFO: slot: 104.24.7.38 | conc: 6 | delay: 1000 ms (+750) | latency: 1345 ms | size:  7601 bytes
+2017-11-23 16:23:29 [scrapy.extensions.throttle] INFO: slot: 104.24.7.38 | conc: 6 | delay:  751 ms (-248) | latency:  503 ms | size:  7853 bytes
+2017-11-23 16:23:30 [scrapy.extensions.throttle] INFO: slot: 104.24.7.38 | conc: 5 | delay: 1000 ms (+248) | latency: 1446 ms | size:  7845 bytes
+2017-11-23 16:23:30 [scrapy.extensions.throttle] INFO: slot: 104.24.7.38 | conc: 5 | delay:  755 ms (-244) | latency:  510 ms | size:  8145 bytes
+2017-11-23 16:23:31 [scrapy.extensions.throttle] INFO: slot: 104.24.7.38 | conc: 4 | delay: 1000 ms (+244) | latency: 2807 ms | size:  6908 bytes
+2017-11-23 16:23:33 [scrapy.extensions.throttle] INFO: slot: 104.24.7.38 | conc: 5 | delay:  766 ms (-233) | latency:  533 ms | size:  7257 bytes
+2017-11-23 16:23:33 [scrapy.extensions.throttle] INFO: slot: 104.24.7.38 | conc: 5 | delay: 1000 ms (+233) | latency: 1398 ms | size:  9009 bytes
+2017-11-23 16:23:35 [scrapy.extensions.throttle] INFO: slot: 104.24.7.38 | conc: 5 | delay:  734 ms (-265) | latency:  469 ms | size:  7250 bytes
+2017-11-23 16:23:35 [scrapy.extensions.throttle] INFO: slot: 104.24.7.38 | conc: 4 | delay:  597 ms (-137) | latency:  460 ms | size:  6707 bytes
+2017-11-23 16:23:37 [scrapy.extensions.throttle] INFO: slot: 104.24.7.38 | conc: 5 | delay: 1000 ms (+402) | latency: 6488 ms | size:  8093 bytes
+2017-11-23 16:23:37 [scrapy.extensions.throttle] INFO: slot: 104.24.7.38 | conc: 4 | delay:  805 ms (-194) | latency:  610 ms | size:  7720 bytes
+2017-11-23 16:23:38 [scrapy.extensions.throttle] INFO: slot: 104.24.7.38 | conc: 4 | delay:  658 ms (-146) | latency:  511 ms | size:  9092 bytes
+2017-11-23 16:23:39 [scrapy.extensions.throttle] INFO: slot: 104.24.7.38 | conc: 5 | delay:  593 ms (-64) | latency:  529 ms | size:  7853 bytes
+2017-11-23 16:23:40 [scrapy.extensions.throttle] INFO: slot: 104.24.7.38 | conc: 4 | delay: 1000 ms (+406) | latency: 1323 ms | size:  8005 bytes
+2017-11-23 16:23:40 [scrapy.extensions.throttle] INFO: slot: 104.24.7.38 | conc: 4 | delay: 1000 ms (+0) | latency:11741 ms | size:  7633 bytes
+2017-11-23 16:23:41 [scrapy.extensions.throttle] INFO: slot: 104.24.7.38 | conc: 3 | delay:  749 ms (-250) | latency:  499 ms | size:  8030 bytes
+2017-11-23 16:23:41 [scrapy.extensions.throttle] INFO: slot: 104.24.7.38 | conc: 2 | delay:  806 ms (+56) | latency:  806 ms | size:  8009 bytes
+2017-11-23 16:23:44 [scrapy.extensions.throttle] INFO: slot: 104.24.7.38 | conc: 4 | delay:  668 ms (-137) | latency:  531 ms | size:  8387 bytes
+2017-11-23 16:23:45 [scrapy.extensions.throttle] INFO: slot: 104.24.7.38 | conc: 4 | delay:  569 ms (-98) | latency:  471 ms | size: 10611 bytes
+2017-11-23 16:23:46 [scrapy.extensions.throttle] INFO: slot: 104.24.7.38 | conc: 5 | delay:  485 ms (-84) | latency:  401 ms | size:  8250 bytes
+2017-11-23 16:23:47 [scrapy.extensions.throttle] INFO: slot: 104.24.7.38 | conc: 5 | delay:  475 ms (-9) | latency:  466 ms | size:  8451 bytes
+2017-11-23 16:23:48 [scrapy.extensions.throttle] INFO: slot: 104.24.7.38 | conc: 6 | delay: 1000 ms (+524) | latency: 2324 ms | size:  8268 bytes
+2017-11-23 16:23:48 [scrapy.extensions.throttle] INFO: slot: 104.24.7.38 | conc: 5 | delay: 1000 ms (+0) | latency: 1188 ms | size:  7356 bytes
+2017-11-23 16:23:48 [scrapy.extensions.throttle] INFO: slot: 104.24.7.38 | conc: 4 | delay: 1000 ms (+0) | latency: 1162 ms | size:  8469 bytes
+2017-11-23 16:24:19 [scrapy.utils.log] INFO: Scrapy 1.4.0 started (bot: NeoScrapy)
+2017-11-23 16:24:19 [scrapy.utils.log] INFO: Overridden settings: {'BOT_NAME': 'NeoScrapy', 'AUTOTHROTTLE_START_DELAY': 0, 'AUTOTHROTTLE_DEBUG': True, 'COOKIES_ENABLED': False, 'CONCURRENT_REQUESTS_PER_IP': 16, 'CONCURRENT_REQUESTS': 32, 'AUTOTHROTTLE_MAX_DELAY': 1, 'AUTOTHROTTLE_ENABLED': True, 'DOWNLOAD_DELAY': 0.25, 'LOG_LEVEL': 'INFO', 'CONCURRENT_REQUESTS_PER_DOMAIN': 16, 'LOG_FILE': 'logs/scrapy.log', 'NEWSPIDER_MODULE': 'NeoScrapy.spiders', 'SPIDER_MODULES': ['NeoScrapy.spiders']}
+2017-11-23 16:24:19 [scrapy.middleware] INFO: Enabled extensions:
+['scrapy.extensions.throttle.AutoThrottle',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.logstats.LogStats']
+2017-11-23 16:24:19 [scrapy.middleware] INFO: Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2017-11-23 16:24:19 [scrapy.middleware] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2017-11-23 16:24:19 [scrapy.middleware] INFO: Enabled item pipelines:
+['NeoScrapy.pipelines.MongoPipeline']
+2017-11-23 16:24:19 [scrapy.core.engine] INFO: Spider opened
+2017-11-23 16:24:19 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2017-11-23 16:24:23 [scrapy.extensions.throttle] INFO: slot: tokenmarket.net | conc: 1 | delay: 1000 ms (+750) | latency: 2250 ms | size: 14298 bytes
+2017-11-23 16:24:24 [scrapy.extensions.throttle] INFO: slot: 104.24.7.38 | conc: 3 | delay:  499 ms (+249) | latency:  499 ms | size:  6922 bytes
+2017-11-23 16:24:25 [scrapy.extensions.throttle] INFO: slot: 104.24.7.38 | conc: 4 | delay:  495 ms (-3) | latency:  492 ms | size:  7709 bytes
+2017-11-23 16:24:26 [scrapy.extensions.throttle] INFO: slot: 104.24.7.38 | conc: 5 | delay: 1000 ms (+504) | latency: 1191 ms | size:  7626 bytes
+2017-11-23 16:24:26 [scrapy.extensions.throttle] INFO: slot: 104.24.7.38 | conc: 4 | delay:  750 ms (-249) | latency:  500 ms | size:  7846 bytes
+2017-11-23 16:24:28 [scrapy.extensions.throttle] INFO: slot: 104.24.7.38 | conc: 4 | delay:  584 ms (-165) | latency:  419 ms | size:  7861 bytes
+2017-11-23 16:24:29 [scrapy.extensions.throttle] INFO: slot: 104.24.7.38 | conc: 4 | delay: 1000 ms (+415) | latency: 1356 ms | size:  8094 bytes
+2017-11-23 16:24:29 [scrapy.extensions.throttle] INFO: slot: 104.24.7.38 | conc: 3 | delay:  739 ms (-260) | latency:  478 ms | size:  8122 bytes
+2017-11-23 16:24:30 [scrapy.extensions.throttle] INFO: slot: 104.24.7.38 | conc: 3 | delay:  586 ms (-152) | latency:  433 ms | size:  9022 bytes
+2017-11-23 16:24:31 [scrapy.extensions.throttle] INFO: slot: 104.24.7.38 | conc: 4 | delay:  526 ms (-59) | latency:  467 ms | size:  7253 bytes
+2017-11-23 16:24:32 [scrapy.extensions.throttle] INFO: slot: 104.24.7.38 | conc: 3 | delay:  503 ms (-23) | latency:  480 ms | size:  7264 bytes
+2017-11-23 16:24:32 [scrapy.extensions.throttle] INFO: slot: 104.24.7.38 | conc: 3 | delay: 1000 ms (+496) | latency: 7789 ms | size:  8499 bytes
+2017-11-23 16:24:32 [scrapy.extensions.throttle] INFO: slot: 104.24.7.38 | conc: 2 | delay:  765 ms (-234) | latency:  531 ms | size:  6695 bytes
+2017-11-23 16:24:34 [scrapy.extensions.throttle] INFO: slot: 104.24.7.38 | conc: 3 | delay:  615 ms (-149) | latency:  466 ms | size:  7723 bytes
+2017-11-23 16:29:54 [scrapy.utils.log] INFO: Scrapy 1.4.0 started (bot: NeoScrapy)
+2017-11-23 16:29:54 [scrapy.utils.log] INFO: Overridden settings: {'AUTOTHROTTLE_ENABLED': True, 'AUTOTHROTTLE_DEBUG': True, 'AUTOTHROTTLE_MAX_DELAY': 1, 'BOT_NAME': 'NeoScrapy', 'CONCURRENT_REQUESTS_PER_IP': 16, 'NEWSPIDER_MODULE': 'NeoScrapy.spiders', 'LOG_FILE': 'logs/scrapy.log', 'LOG_LEVEL': 'INFO', 'CONCURRENT_REQUESTS_PER_DOMAIN': 16, 'SPIDER_MODULES': ['NeoScrapy.spiders'], 'AUTOTHROTTLE_START_DELAY': 0, 'DOWNLOAD_DELAY': 0.25, 'CONCURRENT_REQUESTS': 32, 'COOKIES_ENABLED': False}
+2017-11-23 16:29:54 [scrapy.middleware] INFO: Enabled extensions:
+['scrapy.extensions.throttle.AutoThrottle',
+ 'scrapy.extensions.logstats.LogStats',
+ 'scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.telnet.TelnetConsole']
+2017-11-23 16:29:54 [scrapy.middleware] INFO: Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2017-11-23 16:29:54 [scrapy.middleware] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2017-11-23 16:29:54 [scrapy.middleware] INFO: Enabled item pipelines:
+['NeoScrapy.pipelines.MongoPipeline']
+2017-11-23 16:29:54 [scrapy.core.engine] INFO: Spider opened
+2017-11-23 16:29:54 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2017-11-23 16:29:56 [scrapy.extensions.throttle] INFO: slot: tokenmarket.net | conc: 1 | delay: 1000 ms (+750) | latency: 2109 ms | size: 14327 bytes
+2017-11-23 16:29:57 [scrapy.extensions.throttle] INFO: slot: 104.24.7.38 | conc: 3 | delay:  872 ms (+622) | latency:  872 ms | size:  6907 bytes
+2017-11-23 16:29:58 [scrapy.extensions.throttle] INFO: slot: 104.24.7.38 | conc: 2 | delay: 1000 ms (+127) | latency: 1271 ms | size:  8463 bytes
+2017-11-23 16:29:58 [scrapy.extensions.throttle] INFO: slot: 104.24.7.38 | conc: 1 | delay: 1000 ms (+0) | latency: 1213 ms | size:  7354 bytes
+2017-11-23 16:29:59 [scrapy.extensions.throttle] INFO: slot: 104.24.7.38 | conc: 1 | delay:  773 ms (-226) | latency:  547 ms | size:  8496 bytes
+2017-11-23 16:30:00 [scrapy.extensions.throttle] INFO: slot: 104.24.7.38 | conc: 1 | delay:  678 ms (-95) | latency:  583 ms | size:  8605 bytes
+2017-11-23 16:30:01 [scrapy.extensions.throttle] INFO: slot: 104.24.7.38 | conc: 1 | delay:  588 ms (-89) | latency:  499 ms | size:  8490 bytes
+2017-11-23 16:30:02 [scrapy.extensions.throttle] INFO: slot: 104.24.7.38 | conc: 1 | delay:  718 ms (+129) | latency:  718 ms | size:  7597 bytes
+2017-11-23 16:30:03 [scrapy.extensions.throttle] INFO: slot: 104.24.7.38 | conc: 1 | delay:  562 ms (-155) | latency:  407 ms | size:  7717 bytes
+2017-11-23 16:30:04 [scrapy.extensions.throttle] INFO: slot: 104.24.7.38 | conc: 1 | delay:  512 ms (-50) | latency:  462 ms | size:  7618 bytes
+2017-11-23 16:30:05 [scrapy.extensions.throttle] INFO: slot: 104.24.7.38 | conc: 2 | delay:  904 ms (+391) | latency:  904 ms | size:  7844 bytes
+2017-11-23 16:30:05 [scrapy.extensions.throttle] INFO: slot: 104.24.7.38 | conc: 1 | delay:  695 ms (-209) | latency:  486 ms | size:  8088 bytes
+2017-11-23 16:30:07 [scrapy.extensions.throttle] INFO: slot: 104.24.7.38 | conc: 3 | delay:  706 ms (+11) | latency:  706 ms | size:  8142 bytes
+2017-11-23 16:30:07 [scrapy.extensions.throttle] INFO: slot: 104.24.7.38 | conc: 2 | delay:  586 ms (-119) | latency:  467 ms | size:  9018 bytes
+2017-11-23 16:30:07 [scrapy.extensions.throttle] INFO: slot: 104.24.7.38 | conc: 2 | delay:  760 ms (+173) | latency:  760 ms | size:  7863 bytes
+2017-11-23 16:30:08 [scrapy.extensions.throttle] INFO: slot: 104.24.7.38 | conc: 1 | delay:  703 ms (-57) | latency:  646 ms | size:  7271 bytes
+2017-11-23 16:30:09 [scrapy.extensions.throttle] INFO: slot: 104.24.7.38 | conc: 1 | delay:  641 ms (-61) | latency:  580 ms | size:  7252 bytes
+2017-11-23 16:30:10 [scrapy.extensions.throttle] INFO: slot: 104.24.7.38 | conc: 2 | delay:  554 ms (-87) | latency:  467 ms | size:  6704 bytes
+2017-11-23 16:30:11 [scrapy.extensions.throttle] INFO: slot: 104.24.7.38 | conc: 2 | delay:  965 ms (+410) | latency:  965 ms | size:  7717 bytes
+2017-11-23 16:30:11 [scrapy.extensions.throttle] INFO: slot: 104.24.7.38 | conc: 1 | delay:  771 ms (-193) | latency:  578 ms | size:  7993 bytes
+2017-11-23 16:30:13 [scrapy.extensions.throttle] INFO: slot: 104.24.7.38 | conc: 2 | delay:  673 ms (-98) | latency:  575 ms | size:  7802 bytes
+2017-11-23 16:30:14 [scrapy.extensions.throttle] INFO: slot: 104.24.7.38 | conc: 2 | delay: 1000 ms (+326) | latency: 1122 ms | size:  7923 bytes
+2017-11-23 16:30:15 [scrapy.extensions.throttle] INFO: slot: 104.24.7.38 | conc: 2 | delay:  703 ms (-296) | latency:  407 ms | size:  7967 bytes
+2017-11-23 16:30:16 [scrapy.extensions.throttle] INFO: slot: 104.24.7.38 | conc: 1 | delay: 1000 ms (+296) | latency: 1989 ms | size:  8254 bytes
+2017-11-23 16:30:17 [scrapy.extensions.throttle] INFO: slot: 104.24.7.38 | conc: 1 | delay:  787 ms (-212) | latency:  575 ms | size:  7883 bytes
+2017-11-23 16:30:18 [scrapy.extensions.throttle] INFO: slot: 104.24.7.38 | conc: 1 | delay:  714 ms (-72) | latency:  642 ms | size:  8392 bytes
+2017-11-23 16:30:19 [scrapy.extensions.throttle] INFO: slot: 104.24.7.38 | conc: 2 | delay:  573 ms (-140) | latency:  433 ms | size:  7618 bytes
+2017-11-23 16:30:20 [scrapy.extensions.throttle] INFO: slot: 104.24.7.38 | conc: 2 | delay:  560 ms (-13) | latency:  547 ms | size:  8763 bytes
+2017-11-23 16:30:20 [scrapy.extensions.throttle] INFO: slot: 104.24.7.38 | conc: 2 | delay:  527 ms (-32) | latency:  495 ms | size:  7998 bytes
+2017-11-23 16:30:21 [scrapy.extensions.throttle] INFO: slot: 104.24.7.38 | conc: 2 | delay:  463 ms (-63) | latency:  400 ms | size:  8715 bytes
+2017-11-23 16:30:21 [scrapy.extensions.throttle] INFO: slot: 104.24.7.38 | conc: 2 | delay:  713 ms (+249) | latency:  713 ms | size:  9064 bytes
+2017-11-23 16:30:22 [scrapy.extensions.throttle] INFO: slot: 104.24.7.38 | conc: 1 | delay:  597 ms (-115) | latency:  482 ms | size:  7837 bytes
+2017-11-23 16:30:23 [scrapy.extensions.throttle] INFO: slot: 104.24.7.38 | conc: 1 | delay:  530 ms (-66) | latency:  464 ms | size:  8022 bytes
+2017-11-23 16:30:24 [scrapy.extensions.throttle] INFO: slot: 104.24.7.38 | conc: 3 | delay:  568 ms (+37) | latency:  568 ms | size:  9816 bytes
+2017-11-23 16:30:25 [scrapy.extensions.throttle] INFO: slot: 104.24.7.38 | conc: 3 | delay:  511 ms (-57) | latency:  454 ms | size:  8215 bytes
+2017-11-23 16:30:25 [scrapy.extensions.throttle] INFO: slot: 104.24.7.38 | conc: 2 | delay: 1000 ms (+488) | latency: 1899 ms | size: 14258 bytes
+2017-11-23 16:30:25 [scrapy.extensions.throttle] INFO: slot: 104.24.7.38 | conc: 1 | delay:  747 ms (-252) | latency:  495 ms | size:  7289 bytes
+2017-11-23 16:30:26 [scrapy.extensions.throttle] INFO: slot: 104.24.7.38 | conc: 1 | delay:  599 ms (-147) | latency:  452 ms | size:  8779 bytes
+2017-11-23 16:30:28 [scrapy.extensions.throttle] INFO: slot: 104.24.7.38 | conc: 2 | delay:  793 ms (+193) | latency:  793 ms | size:  8171 bytes
+2017-11-23 16:30:28 [scrapy.extensions.throttle] INFO: slot: 104.24.7.38 | conc: 1 | delay:  589 ms (-204) | latency:  385 ms | size:  7565 bytes
+2017-11-23 16:30:29 [scrapy.extensions.throttle] INFO: slot: 104.24.7.38 | conc: 2 | delay:  578 ms (-10) | latency:  568 ms | size:  8771 bytes
+2017-11-23 16:30:30 [scrapy.extensions.throttle] INFO: slot: 104.24.7.38 | conc: 1 | delay:  579 ms (+0) | latency:  579 ms | size:  7810 bytes
+2017-11-23 16:30:30 [scrapy.extensions.throttle] INFO: slot: 104.24.7.38 | conc: 2 | delay:  517 ms (-61) | latency:  456 ms | size:  8428 bytes
+2017-11-23 16:30:31 [scrapy.extensions.throttle] INFO: slot: 104.24.7.38 | conc: 2 | delay:  508 ms (-9) | latency:  499 ms | size:  6964 bytes
+2017-11-23 16:30:31 [scrapy.extensions.throttle] INFO: slot: 104.24.7.38 | conc: 2 | delay:  494 ms (-14) | latency:  480 ms | size:  8038 bytes
+2017-11-23 16:30:32 [scrapy.extensions.throttle] INFO: slot: 104.24.7.38 | conc: 2 | delay:  634 ms (+139) | latency:  634 ms | size:  7925 bytes
+2017-11-23 16:30:33 [scrapy.extensions.throttle] INFO: slot: 104.24.7.38 | conc: 2 | delay:  563 ms (-70) | latency:  493 ms | size:  8201 bytes
+2017-11-23 16:30:33 [scrapy.extensions.throttle] INFO: slot: 104.24.7.38 | conc: 1 | delay:  491 ms (-71) | latency:  420 ms | size:  7915 bytes
+2017-11-23 16:30:34 [scrapy.extensions.throttle] INFO: slot: 104.24.7.38 | conc: 2 | delay:  474 ms (-17) | latency:  457 ms | size:  7857 bytes
+2017-11-23 16:30:35 [scrapy.extensions.throttle] INFO: slot: 104.24.7.38 | conc: 2 | delay:  433 ms (-41) | latency:  392 ms | size:  7986 bytes
+2017-11-23 16:30:35 [scrapy.extensions.throttle] INFO: slot: 104.24.7.38 | conc: 2 | delay:  454 ms (+20) | latency:  454 ms | size:  7012 bytes
+2017-11-23 16:30:35 [scrapy.extensions.throttle] INFO: slot: 104.24.7.38 | conc: 1 | delay:  587 ms (+133) | latency:  587 ms | size:  8627 bytes
+2017-11-23 16:30:36 [scrapy.extensions.throttle] INFO: slot: 104.24.7.38 | conc: 1 | delay:  512 ms (-74) | latency:  438 ms | size:  8116 bytes
+2017-11-23 16:30:37 [scrapy.extensions.throttle] INFO: slot: 104.24.7.38 | conc: 2 | delay:  588 ms (+75) | latency:  588 ms | size:  7585 bytes
+2017-11-23 16:30:37 [scrapy.extensions.throttle] INFO: slot: 104.24.7.38 | conc: 1 | delay:  525 ms (-62) | latency:  463 ms | size:  7642 bytes
+2017-11-23 16:30:38 [scrapy.extensions.throttle] INFO: slot: 104.24.7.38 | conc: 2 | delay:  477 ms (-47) | latency:  430 ms | size:  7839 bytes
+2017-11-23 16:30:39 [scrapy.extensions.throttle] INFO: slot: 104.24.7.38 | conc: 1 | delay:  408 ms (-68) | latency:  340 ms | size:  8610 bytes
+2017-11-23 16:30:40 [scrapy.extensions.throttle] INFO: slot: 104.24.7.38 | conc: 3 | delay:  451 ms (+42) | latency:  451 ms | size:  7538 bytes
+2017-11-23 16:30:40 [scrapy.extensions.throttle] INFO: slot: 104.24.7.38 | conc: 2 | delay:  898 ms (+447) | latency:  898 ms | size:  7946 bytes
+2017-11-23 16:30:41 [scrapy.extensions.throttle] INFO: slot: 104.24.7.38 | conc: 2 | delay: 1000 ms (+101) | latency: 1349 ms | size:  7626 bytes
+2017-11-23 16:30:42 [scrapy.extensions.throttle] INFO: slot: 104.24.7.38 | conc: 1 | delay:  709 ms (-290) | latency:  418 ms | size:  8372 bytes
+2017-11-23 16:30:43 [scrapy.extensions.throttle] INFO: slot: 104.24.7.38 | conc: 2 | delay:  772 ms (+63) | latency:  772 ms | size:  7834 bytes
+2017-11-23 16:30:45 [scrapy.extensions.throttle] INFO: slot: 104.24.7.38 | conc: 2 | delay:  739 ms (-32) | latency:  707 ms | size:  8425 bytes
+2017-11-23 16:30:45 [scrapy.extensions.throttle] INFO: slot: 104.24.7.38 | conc: 1 | delay:  662 ms (-76) | latency:  586 ms | size:  7552 bytes
+2017-11-23 16:30:46 [scrapy.extensions.throttle] INFO: slot: 104.24.7.38 | conc: 2 | delay:  584 ms (-77) | latency:  507 ms | size:  7878 bytes
+2017-11-23 16:30:46 [scrapy.extensions.throttle] INFO: slot: 104.24.7.38 | conc: 1 | delay:  472 ms (-111) | latency:  361 ms | size:  7460 bytes
+2017-11-23 16:30:47 [scrapy.extensions.throttle] INFO: slot: 104.24.7.38 | conc: 2 | delay:  445 ms (-27) | latency:  418 ms | size:  8124 bytes
+2017-11-23 16:30:48 [scrapy.extensions.throttle] INFO: slot: 104.24.7.38 | conc: 2 | delay:  418 ms (-27) | latency:  391 ms | size:  7145 bytes
+2017-11-23 16:30:49 [scrapy.extensions.throttle] INFO: slot: 104.24.7.38 | conc: 2 | delay:  778 ms (+359) | latency:  778 ms | size: 14479 bytes
+2017-11-23 16:30:49 [scrapy.extensions.throttle] INFO: slot: 104.24.7.38 | conc: 1 | delay:  640 ms (-137) | latency:  503 ms | size:  8232 bytes
+2017-11-23 16:30:50 [scrapy.extensions.throttle] INFO: slot: 104.24.7.38 | conc: 2 | delay:  557 ms (-82) | latency:  475 ms | size:  7734 bytes
+2017-11-23 16:30:51 [scrapy.extensions.throttle] INFO: slot: 104.24.7.38 | conc: 1 | delay:  489 ms (-67) | latency:  422 ms | size:  7379 bytes
+2017-11-23 16:30:52 [scrapy.extensions.throttle] INFO: slot: 104.24.7.38 | conc: 2 | delay:  478 ms (-11) | latency:  467 ms | size:  8470 bytes
+2017-11-23 16:30:52 [scrapy.extensions.throttle] INFO: slot: 104.24.7.38 | conc: 2 | delay:  467 ms (-11) | latency:  456 ms | size:  7421 bytes
+2017-11-23 16:30:53 [scrapy.extensions.throttle] INFO: slot: 104.24.7.38 | conc: 2 | delay:  439 ms (-27) | latency:  412 ms | size:  8345 bytes
+2017-11-23 16:30:53 [scrapy.extensions.throttle] INFO: slot: 104.24.7.38 | conc: 2 | delay:  568 ms (+128) | latency:  568 ms | size:  8043 bytes
+2017-11-23 16:30:54 [scrapy.extensions.logstats] INFO: Crawled 76 pages (at 76 pages/min), scraped 73 items (at 73 items/min)
+2017-11-23 16:30:54 [scrapy.extensions.throttle] INFO: slot: 104.24.7.38 | conc: 3 | delay:  496 ms (-72) | latency:  424 ms | size:  7960 bytes
+2017-11-23 16:30:55 [scrapy.extensions.throttle] INFO: slot: 104.24.7.38 | conc: 2 | delay:  446 ms (-49) | latency:  397 ms | size:  8969 bytes
+2017-11-23 16:30:55 [scrapy.extensions.throttle] INFO: slot: 104.24.7.38 | conc: 1 | delay:  490 ms (+43) | latency:  490 ms | size:  7493 bytes
+2017-11-23 16:30:55 [scrapy.extensions.throttle] INFO: slot: 104.24.7.38 | conc: 1 | delay:  451 ms (-39) | latency:  412 ms | size:  8720 bytes
+2017-11-23 16:30:57 [scrapy.extensions.throttle] INFO: slot: 104.24.7.38 | conc: 2 | delay:  453 ms (+2) | latency:  453 ms | size:  8190 bytes
+2017-11-23 16:30:57 [scrapy.extensions.throttle] INFO: slot: 104.24.7.38 | conc: 2 | delay:  458 ms (+5) | latency:  458 ms | size:  7686 bytes
+2017-11-23 16:30:57 [scrapy.extensions.throttle] INFO: slot: 104.24.7.38 | conc: 1 | delay:  426 ms (-32) | latency:  394 ms | size:  8391 bytes
+2017-11-23 16:30:58 [scrapy.extensions.throttle] INFO: slot: 104.24.7.38 | conc: 3 | delay:  481 ms (+55) | latency:  481 ms | size:  7560 bytes
+2017-11-23 16:30:58 [scrapy.extensions.throttle] INFO: slot: 104.24.7.38 | conc: 2 | delay:  536 ms (+55) | latency:  536 ms | size:  7521 bytes
+2017-11-23 16:30:59 [scrapy.extensions.throttle] INFO: slot: 104.24.7.38 | conc: 2 | delay:  567 ms (+31) | latency:  567 ms | size:  8166 bytes
+2017-11-23 16:31:00 [scrapy.extensions.throttle] INFO: slot: 104.24.7.38 | conc: 4 | delay:  496 ms (-70) | latency:  426 ms | size:  7725 bytes
+2017-11-23 16:31:01 [scrapy.extensions.throttle] INFO: slot: 104.24.7.38 | conc: 3 | delay:  912 ms (+415) | latency:  912 ms | size:  8694 bytes
+2017-11-23 16:31:01 [scrapy.extensions.throttle] INFO: slot: 104.24.7.38 | conc: 2 | delay: 1000 ms (+87) | latency: 2024 ms | size:  8903 bytes
+2017-11-23 16:31:02 [scrapy.extensions.throttle] INFO: slot: 104.24.7.38 | conc: 2 | delay:  700 ms (-299) | latency:  401 ms | size:  7145 bytes
+2017-11-23 16:31:03 [scrapy.extensions.throttle] INFO: slot: 104.24.7.38 | conc: 3 | delay:  630 ms (-69) | latency:  561 ms | size:  7598 bytes
+2017-11-23 16:31:03 [scrapy.extensions.throttle] INFO: slot: 104.24.7.38 | conc: 2 | delay: 1000 ms (+369) | latency: 3007 ms | size:  8432 bytes
+2017-11-23 16:31:04 [scrapy.extensions.throttle] INFO: slot: 104.24.7.38 | conc: 1 | delay: 1000 ms (+0) | latency: 1450 ms | size:  7785 bytes
+2017-11-23 16:31:05 [scrapy.extensions.throttle] INFO: slot: 104.24.7.38 | conc: 1 | delay:  728 ms (-271) | latency:  456 ms | size:  7985 bytes
+2017-11-23 16:31:06 [scrapy.extensions.throttle] INFO: slot: 104.24.7.38 | conc: 1 | delay:  584 ms (-143) | latency:  441 ms | size:  7586 bytes
+2017-11-23 16:31:07 [scrapy.extensions.throttle] INFO: slot: 104.24.7.38 | conc: 2 | delay:  628 ms (+43) | latency:  628 ms | size:  8041 bytes
+2017-11-23 16:31:07 [scrapy.extensions.throttle] INFO: slot: 104.24.7.38 | conc: 1 | delay:  471 ms (-156) | latency:  315 ms | size:  7572 bytes
+2017-11-23 16:31:08 [scrapy.extensions.throttle] INFO: slot: 104.24.7.38 | conc: 2 | delay:  460 ms (-11) | latency:  449 ms | size:  8366 bytes
+2017-11-23 16:31:10 [scrapy.extensions.throttle] INFO: slot: 104.24.7.38 | conc: 3 | delay: 1000 ms (+539) | latency: 1188 ms | size:  8096 bytes
+2017-11-23 16:31:10 [scrapy.extensions.throttle] INFO: slot: 104.24.7.38 | conc: 2 | delay:  781 ms (-218) | latency:  562 ms | size:  8462 bytes
+2017-11-23 16:31:10 [scrapy.extensions.throttle] INFO: slot: 104.24.7.38 | conc: 1 | delay:  564 ms (-216) | latency:  348 ms | size:  7581 bytes
+2017-11-23 16:31:12 [scrapy.extensions.throttle] INFO: slot: 104.24.7.38 | conc: 2 | delay:  894 ms (+329) | latency:  894 ms | size: 14426 bytes
+2017-11-23 16:31:12 [scrapy.extensions.throttle] INFO: slot: 104.24.7.38 | conc: 2 | delay:  678 ms (-215) | latency:  463 ms | size:  7852 bytes
+2017-11-23 16:31:13 [scrapy.extensions.throttle] INFO: slot: 104.24.7.38 | conc: 2 | delay:  582 ms (-96) | latency:  486 ms | size:  8929 bytes
+2017-11-23 16:31:13 [scrapy.extensions.throttle] INFO: slot: 104.24.7.38 | conc: 1 | delay:  460 ms (-121) | latency:  339 ms | size:  7386 bytes
+2017-11-23 16:31:15 [scrapy.extensions.throttle] INFO: slot: 104.24.7.38 | conc: 4 | delay:  797 ms (+336) | latency:  797 ms | size:  9190 bytes
+2017-11-23 16:31:16 [scrapy.extensions.throttle] INFO: slot: 104.24.7.38 | conc: 4 | delay:  684 ms (-112) | latency:  572 ms | size:  7760 bytes
+2017-11-23 16:31:16 [scrapy.extensions.throttle] INFO: slot: 104.24.7.38 | conc: 3 | delay: 1000 ms (+315) | latency: 2526 ms | size:  8259 bytes
+2017-11-23 16:31:16 [scrapy.extensions.throttle] INFO: slot: 104.24.7.38 | conc: 2 | delay:  730 ms (-269) | latency:  460 ms | size:  7931 bytes
+2017-11-23 16:31:17 [scrapy.extensions.throttle] INFO: slot: 104.24.7.38 | conc: 2 | delay: 1000 ms (+269) | latency: 1283 ms | size:  9102 bytes
+2017-11-23 16:31:17 [scrapy.extensions.throttle] INFO: slot: 104.24.7.38 | conc: 1 | delay:  679 ms (-320) | latency:  359 ms | size:  7795 bytes
+2017-11-23 16:31:18 [scrapy.extensions.throttle] INFO: slot: 104.24.7.38 | conc: 2 | delay:  563 ms (-115) | latency:  448 ms | size:  8222 bytes
+2017-11-23 16:31:19 [scrapy.extensions.throttle] INFO: slot: 104.24.7.38 | conc: 2 | delay:  537 ms (-26) | latency:  511 ms | size:  7908 bytes
+2017-11-23 16:31:19 [scrapy.extensions.throttle] INFO: slot: 104.24.7.38 | conc: 2 | delay:  541 ms (+3) | latency:  541 ms | size:  7973 bytes
+2017-11-23 16:31:20 [scrapy.extensions.throttle] INFO: slot: 104.24.7.38 | conc: 2 | delay:  734 ms (+193) | latency:  734 ms | size:  9647 bytes
+2017-11-23 16:31:20 [scrapy.extensions.throttle] INFO: slot: 104.24.7.38 | conc: 1 | delay:  594 ms (-140) | latency:  454 ms | size: 11043 bytes
+2017-11-23 16:31:21 [scrapy.extensions.throttle] INFO: slot: 104.24.7.38 | conc: 1 | delay:  537 ms (-56) | latency:  481 ms | size:  7315 bytes
+2017-11-23 16:31:22 [scrapy.extensions.throttle] INFO: slot: 104.24.7.38 | conc: 2 | delay:  472 ms (-64) | latency:  408 ms | size:  6757 bytes
+2017-11-23 16:31:22 [scrapy.extensions.throttle] INFO: slot: 104.24.7.38 | conc: 1 | delay:  859 ms (+386) | latency:  859 ms | size:  7823 bytes
+2017-11-23 16:31:23 [scrapy.extensions.throttle] INFO: slot: 104.24.7.38 | conc: 1 | delay:  665 ms (-194) | latency:  471 ms | size:  6899 bytes
+2017-11-23 16:31:24 [scrapy.extensions.throttle] INFO: slot: 104.24.7.38 | conc: 2 | delay:  609 ms (-55) | latency:  554 ms | size:  8118 bytes
+2017-11-23 16:31:25 [scrapy.extensions.throttle] INFO: slot: 104.24.7.38 | conc: 1 | delay:  540 ms (-69) | latency:  471 ms | size:  8371 bytes
+2017-11-23 16:31:26 [scrapy.extensions.throttle] INFO: slot: 104.24.7.38 | conc: 2 | delay:  850 ms (+309) | latency:  850 ms | size:  7521 bytes
+2017-11-23 16:31:26 [scrapy.extensions.throttle] INFO: slot: 104.24.7.38 | conc: 1 | delay:  793 ms (-56) | latency:  737 ms | size:  8950 bytes
+2017-11-23 16:31:27 [scrapy.extensions.throttle] INFO: slot: 104.24.7.38 | conc: 2 | delay:  646 ms (-146) | latency:  500 ms | size:  7737 bytes
+2017-11-23 16:31:28 [scrapy.extensions.throttle] INFO: slot: 104.24.7.38 | conc: 2 | delay:  533 ms (-112) | latency:  421 ms | size:  8231 bytes
+2017-11-23 16:31:29 [scrapy.extensions.throttle] INFO: slot: 104.24.7.38 | conc: 2 | delay:  509 ms (-24) | latency:  485 ms | size:  7924 bytes
+2017-11-23 16:31:29 [scrapy.extensions.throttle] INFO: slot: 104.24.7.38 | conc: 2 | delay:  477 ms (-32) | latency:  445 ms | size:  7613 bytes
+2017-11-23 16:31:29 [scrapy.extensions.throttle] INFO: slot: 104.24.7.38 | conc: 2 | delay:  472 ms (-4) | latency:  468 ms | size:  7927 bytes
+2017-11-23 16:31:30 [scrapy.extensions.throttle] INFO: slot: 104.24.7.38 | conc: 2 | delay:  647 ms (+174) | latency:  647 ms | size:  7939 bytes
+2017-11-23 16:31:31 [scrapy.extensions.throttle] INFO: slot: 104.24.7.38 | conc: 2 | delay:  560 ms (-87) | latency:  473 ms | size:  7183 bytes
+2017-11-23 16:31:31 [scrapy.extensions.throttle] INFO: slot: 104.24.7.38 | conc: 2 | delay:  622 ms (+62) | latency:  622 ms | size:  8178 bytes
+2017-11-23 16:31:32 [scrapy.extensions.throttle] INFO: slot: 104.24.7.38 | conc: 2 | delay: 1000 ms (+377) | latency: 1101 ms | size:  9630 bytes
+2017-11-23 16:31:33 [scrapy.extensions.throttle] INFO: slot: 104.24.7.38 | conc: 1 | delay:  718 ms (-281) | latency:  436 ms | size:  8389 bytes
+2017-11-23 16:31:35 [scrapy.extensions.throttle] INFO: slot: 104.24.7.38 | conc: 2 | delay:  552 ms (-165) | latency:  387 ms | size:  7846 bytes
+2017-11-23 16:31:36 [scrapy.extensions.throttle] INFO: slot: 104.24.7.38 | conc: 2 | delay:  700 ms (+147) | latency:  700 ms | size: 14011 bytes
+2017-11-23 16:31:36 [scrapy.core.scraper] ERROR: Spider error processing <GET https://tokenmarket.net/blockchain/all-assets?batch_num=4&batch_size=100> (referer: https://tokenmarket.net/blockchain/all-assets?batch_num=3&batch_size=100)
+Traceback (most recent call last):
+  File "E:\python\scrapy\NeoScrapy\NeoScrapy\spiders\tokenmarket.py", line 21, in parse
+    currency['logo'] = tds[0].find('a').attrib['href']
+AttributeError: 'NoneType' object has no attribute 'attrib'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "c:\users\divisey\appdata\local\programs\python\python35\lib\site-packages\scrapy\utils\defer.py", line 102, in iter_errback
+    yield next(it)
+  File "c:\users\divisey\appdata\local\programs\python\python35\lib\site-packages\scrapy\spidermiddlewares\offsite.py", line 29, in process_spider_output
+    for x in result:
+  File "c:\users\divisey\appdata\local\programs\python\python35\lib\site-packages\scrapy\spidermiddlewares\referer.py", line 339, in <genexpr>
+    return (_set_referer(r) for r in result or ())
+  File "c:\users\divisey\appdata\local\programs\python\python35\lib\site-packages\scrapy\spidermiddlewares\urllength.py", line 37, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "c:\users\divisey\appdata\local\programs\python\python35\lib\site-packages\scrapy\spidermiddlewares\depth.py", line 58, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "E:\python\scrapy\NeoScrapy\NeoScrapy\spiders\tokenmarket.py", line 27, in parse
+    self.logger.error('parse tokenmarket currency list page error :: ' + str(currency) + e)
+TypeError: Can't convert 'AttributeError' object to str implicitly
+2017-11-23 16:31:36 [scrapy.extensions.throttle] INFO: slot: 104.24.7.38 | conc: 2 | delay:  574 ms (-125) | latency:  449 ms | size:  7853 bytes
+2017-11-23 16:31:36 [scrapy.extensions.throttle] INFO: slot: 104.24.7.38 | conc: 1 | delay: 1000 ms (+425) | latency: 1055 ms | size:  7929 bytes
+2017-11-23 16:31:38 [scrapy.extensions.throttle] INFO: slot: 104.24.7.38 | conc: 1 | delay:  749 ms (-250) | latency:  498 ms | size:  7946 bytes
+2017-11-23 16:31:40 [scrapy.extensions.throttle] INFO: slot: 104.24.7.38 | conc: 2 | delay:  566 ms (-182) | latency:  384 ms | size:  7832 bytes
+2017-11-23 16:31:42 [scrapy.extensions.throttle] INFO: slot: 104.24.7.38 | conc: 4 | delay:  858 ms (+291) | latency:  858 ms | size:  7920 bytes
+2017-11-23 16:31:42 [scrapy.extensions.throttle] INFO: slot: 104.24.7.38 | conc: 3 | delay:  619 ms (-238) | latency:  381 ms | size:  7538 bytes
+2017-11-23 16:31:43 [scrapy.extensions.throttle] INFO: slot: 104.24.7.38 | conc: 4 | delay:  508 ms (-111) | latency:  397 ms | size:  8172 bytes
+2017-11-23 16:31:43 [scrapy.extensions.throttle] INFO: slot: 104.24.7.38 | conc: 3 | delay:  492 ms (-15) | latency:  477 ms | size:  7958 bytes
+2017-11-23 16:31:43 [scrapy.extensions.throttle] INFO: slot: 104.24.7.38 | conc: 2 | delay:  472 ms (-19) | latency:  453 ms | size:  7853 bytes
+2017-11-23 16:31:44 [scrapy.extensions.throttle] INFO: slot: 104.24.7.38 | conc: 1 | delay:  393 ms (-79) | latency:  314 ms | size:  7358 bytes
+2017-11-23 16:31:45 [scrapy.extensions.throttle] INFO: slot: 104.24.7.38 | conc: 3 | delay:  501 ms (+107) | latency:  501 ms | size:  7403 bytes
+2017-11-23 16:31:46 [scrapy.extensions.throttle] INFO: slot: 104.24.7.38 | conc: 3 | delay:  689 ms (+188) | latency:  689 ms | size:  7924 bytes
+2017-11-23 16:31:46 [scrapy.extensions.throttle] INFO: slot: 104.24.7.38 | conc: 2 | delay:  742 ms (+53) | latency:  742 ms | size:  7968 bytes
+2017-11-23 16:31:46 [scrapy.extensions.throttle] INFO: slot: 104.24.7.38 | conc: 1 | delay:  602 ms (-140) | latency:  462 ms | size:  7406 bytes
+2017-11-23 16:31:47 [scrapy.extensions.throttle] INFO: slot: 104.24.7.38 | conc: 2 | delay:  520 ms (-81) | latency:  439 ms | size:  8604 bytes
+2017-11-23 16:31:48 [scrapy.extensions.throttle] INFO: slot: 104.24.7.38 | conc: 2 | delay:  451 ms (-68) | latency:  383 ms | size:  7710 bytes
+2017-11-23 16:31:48 [scrapy.extensions.throttle] INFO: slot: 104.24.7.38 | conc: 1 | delay:  892 ms (+440) | latency:  892 ms | size:  8009 bytes
+2017-11-23 16:31:51 [scrapy.extensions.throttle] INFO: slot: 104.24.7.38 | conc: 2 | delay:  961 ms (+69) | latency:  961 ms | size:  7879 bytes
+2017-11-23 16:31:51 [scrapy.extensions.throttle] INFO: slot: 104.24.7.38 | conc: 1 | delay:  723 ms (-238) | latency:  485 ms | size:  8310 bytes
+2017-11-23 16:31:51 [scrapy.extensions.throttle] INFO: slot: 104.24.7.38 | conc: 1 | delay:  510 ms (-212) | latency:  298 ms | size:  8399 bytes
+2017-11-23 16:31:53 [scrapy.extensions.throttle] INFO: slot: 104.24.7.38 | conc: 2 | delay:  483 ms (-27) | latency:  456 ms | size:  7975 bytes
+2017-11-23 16:31:54 [scrapy.extensions.throttle] INFO: slot: 104.24.7.38 | conc: 2 | delay:  462 ms (-21) | latency:  441 ms | size:  8561 bytes
+2017-11-23 16:31:54 [scrapy.extensions.throttle] INFO: slot: 104.24.7.38 | conc: 2 | delay:  475 ms (+12) | latency:  475 ms | size:  8793 bytes
+2017-11-23 16:31:54 [scrapy.extensions.logstats] INFO: Crawled 159 pages (at 83 pages/min), scraped 153 items (at 80 items/min)
+2017-11-23 16:31:54 [scrapy.extensions.throttle] INFO: slot: 104.24.7.38 | conc: 1 | delay:  549 ms (+74) | latency:  549 ms | size:  7772 bytes
+2017-11-23 16:31:55 [scrapy.extensions.throttle] INFO: slot: 104.24.7.38 | conc: 2 | delay:  486 ms (-62) | latency:  424 ms | size:  7338 bytes
+2017-11-23 16:31:56 [scrapy.extensions.throttle] INFO: slot: 104.24.7.38 | conc: 2 | delay:  589 ms (+102) | latency:  589 ms | size:  7511 bytes
+2017-11-23 16:31:56 [scrapy.extensions.throttle] INFO: slot: 104.24.7.38 | conc: 2 | delay:  469 ms (-119) | latency:  350 ms | size:  8226 bytes
+2017-11-23 16:31:57 [scrapy.extensions.throttle] INFO: slot: 104.24.7.38 | conc: 2 | delay:  484 ms (+14) | latency:  484 ms | size:  9882 bytes
+2017-11-23 16:31:57 [scrapy.extensions.throttle] INFO: slot: 104.24.7.38 | conc: 2 | delay:  459 ms (-25) | latency:  434 ms | size:  8452 bytes
+2017-11-23 16:31:58 [scrapy.extensions.throttle] INFO: slot: 104.24.7.38 | conc: 2 | delay:  422 ms (-36) | latency:  386 ms | size:  8390 bytes
+2017-11-23 16:31:58 [scrapy.extensions.throttle] INFO: slot: 104.24.7.38 | conc: 1 | delay: 1000 ms (+577) | latency: 1091 ms | size:  7509 bytes
+2017-11-23 16:32:00 [scrapy.extensions.throttle] INFO: slot: 104.24.7.38 | conc: 1 | delay:  731 ms (-268) | latency:  462 ms | size:  7718 bytes
+2017-11-23 16:32:01 [scrapy.extensions.throttle] INFO: slot: 104.24.7.38 | conc: 1 | delay:  582 ms (-148) | latency:  433 ms | size:  8388 bytes
+2017-11-23 16:32:01 [scrapy.extensions.throttle] INFO: slot: 104.24.7.38 | conc: 1 | delay:  477 ms (-104) | latency:  372 ms | size:  7634 bytes
+2017-11-23 16:32:03 [scrapy.extensions.throttle] INFO: slot: 104.24.7.38 | conc: 3 | delay: 1000 ms (+522) | latency: 1115 ms | size:  8449 bytes
+2017-11-23 16:32:04 [scrapy.extensions.throttle] INFO: slot: 104.24.7.38 | conc: 2 | delay:  713 ms (-286) | latency:  427 ms | size:  8296 bytes
+2017-11-23 16:32:05 [scrapy.extensions.throttle] INFO: slot: 104.24.7.38 | conc: 2 | delay: 1000 ms (+286) | latency: 1727 ms | size:  9351 bytes
+2017-11-23 16:32:05 [scrapy.core.scraper] ERROR: Spider error processing <GET https://tokenmarket.net/blockchain/ethereum/assets/shift/> (referer: https://tokenmarket.net/blockchain/all-assets?batch_num=4&batch_size=100)
+Traceback (most recent call last):
+  File "E:\python\scrapy\NeoScrapy\NeoScrapy\spiders\tokenmarket.py", line 48, in detail_parse
+    currency['website'] = tr.find('td/a').attrib['href']
+AttributeError: 'NoneType' object has no attribute 'attrib'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "c:\users\divisey\appdata\local\programs\python\python35\lib\site-packages\scrapy\utils\defer.py", line 102, in iter_errback
+    yield next(it)
+  File "c:\users\divisey\appdata\local\programs\python\python35\lib\site-packages\scrapy\spidermiddlewares\offsite.py", line 29, in process_spider_output
+    for x in result:
+  File "c:\users\divisey\appdata\local\programs\python\python35\lib\site-packages\scrapy\spidermiddlewares\referer.py", line 339, in <genexpr>
+    return (_set_referer(r) for r in result or ())
+  File "c:\users\divisey\appdata\local\programs\python\python35\lib\site-packages\scrapy\spidermiddlewares\urllength.py", line 37, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "c:\users\divisey\appdata\local\programs\python\python35\lib\site-packages\scrapy\spidermiddlewares\depth.py", line 58, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "E:\python\scrapy\NeoScrapy\NeoScrapy\spiders\tokenmarket.py", line 75, in detail_parse
+    self.logger.error('parse tokenmarket currency detail error :: ' + str(currency) + e)
+TypeError: Can't convert 'AttributeError' object to str implicitly
+2017-11-23 16:32:05 [scrapy.extensions.throttle] INFO: slot: 104.24.7.38 | conc: 1 | delay:  876 ms (-123) | latency:  752 ms | size:  7950 bytes
+2017-11-23 16:32:06 [scrapy.extensions.throttle] INFO: slot: 104.24.7.38 | conc: 1 | delay:  669 ms (-206) | latency:  463 ms | size:  7690 bytes
+2017-11-23 16:32:07 [scrapy.extensions.throttle] INFO: slot: 104.24.7.38 | conc: 2 | delay:  575 ms (-93) | latency:  482 ms | size:  6917 bytes
+2017-11-23 16:32:07 [scrapy.extensions.throttle] INFO: slot: 104.24.7.38 | conc: 2 | delay:  572 ms (-2) | latency:  570 ms | size:  8302 bytes
+2017-11-23 16:32:08 [scrapy.extensions.throttle] INFO: slot: 104.24.7.38 | conc: 1 | delay:  482 ms (-89) | latency:  393 ms | size:  7684 bytes
+2017-11-23 16:32:09 [scrapy.extensions.throttle] INFO: slot: 104.24.7.38 | conc: 2 | delay:  446 ms (-36) | latency:  410 ms | size:  7510 bytes
+2017-11-23 16:32:09 [scrapy.extensions.throttle] INFO: slot: 104.24.7.38 | conc: 2 | delay:  414 ms (-31) | latency:  383 ms | size:  7772 bytes
+2017-11-23 16:32:10 [scrapy.extensions.throttle] INFO: slot: 104.24.7.38 | conc: 2 | delay:  481 ms (+66) | latency:  481 ms | size:  7651 bytes
+2017-11-23 16:32:10 [scrapy.extensions.throttle] INFO: slot: 104.24.7.38 | conc: 2 | delay:  434 ms (-46) | latency:  388 ms | size:  8069 bytes
+2017-11-23 16:32:11 [scrapy.extensions.throttle] INFO: slot: 104.24.7.38 | conc: 2 | delay:  461 ms (+26) | latency:  461 ms | size:  7751 bytes
+2017-11-23 16:32:11 [scrapy.extensions.throttle] INFO: slot: 104.24.7.38 | conc: 2 | delay:  455 ms (-5) | latency:  450 ms | size:  7623 bytes
+2017-11-23 16:32:12 [scrapy.extensions.throttle] INFO: slot: 104.24.7.38 | conc: 2 | delay:  433 ms (-21) | latency:  412 ms | size:  8328 bytes
+2017-11-23 16:32:12 [scrapy.extensions.throttle] INFO: slot: 104.24.7.38 | conc: 1 | delay:  372 ms (-61) | latency:  311 ms | size:  9052 bytes
+2017-11-23 16:32:13 [scrapy.extensions.throttle] INFO: slot: 104.24.7.38 | conc: 3 | delay:  453 ms (+80) | latency:  453 ms | size:  8278 bytes
+2017-11-23 16:32:13 [scrapy.extensions.throttle] INFO: slot: 104.24.7.38 | conc: 3 | delay:  504 ms (+51) | latency:  504 ms | size:  8667 bytes
+2017-11-23 16:32:14 [scrapy.extensions.throttle] INFO: slot: 104.24.7.38 | conc: 2 | delay:  453 ms (-50) | latency:  403 ms | size:  9416 bytes
+2017-11-23 16:32:14 [scrapy.extensions.throttle] INFO: slot: 104.24.7.38 | conc: 1 | delay:  719 ms (+265) | latency:  719 ms | size:  7321 bytes
+2017-11-23 16:32:15 [scrapy.extensions.throttle] INFO: slot: 104.24.7.38 | conc: 2 | delay:  687 ms (-31) | latency:  656 ms | size:  8070 bytes
+2017-11-23 16:32:15 [scrapy.extensions.throttle] INFO: slot: 104.24.7.38 | conc: 2 | delay:  613 ms (-73) | latency:  540 ms | size:  8636 bytes
+2017-11-23 16:32:16 [scrapy.extensions.throttle] INFO: slot: 104.24.7.38 | conc: 1 | delay:  468 ms (-144) | latency:  324 ms | size:  8593 bytes
+2017-11-23 16:32:18 [scrapy.extensions.throttle] INFO: slot: 104.24.7.38 | conc: 3 | delay:  712 ms (+243) | latency:  712 ms | size:  9101 bytes
+2017-11-23 16:32:18 [scrapy.extensions.throttle] INFO: slot: 104.24.7.38 | conc: 2 | delay: 1000 ms (+287) | latency: 1551 ms | size:  8082 bytes
+2017-11-23 16:32:18 [scrapy.extensions.throttle] INFO: slot: 104.24.7.38 | conc: 1 | delay:  723 ms (-276) | latency:  447 ms | size:  7689 bytes
+2017-11-23 16:32:19 [scrapy.extensions.throttle] INFO: slot: 104.24.7.38 | conc: 1 | delay:  566 ms (-157) | latency:  409 ms | size:  8101 bytes
+2017-11-23 16:32:20 [scrapy.extensions.throttle] INFO: slot: 104.24.7.38 | conc: 2 | delay:  761 ms (+194) | latency:  761 ms | size:  8453 bytes
+2017-11-23 16:32:20 [scrapy.extensions.throttle] INFO: slot: 104.24.7.38 | conc: 1 | delay:  674 ms (-87) | latency:  587 ms | size:  7386 bytes
+2017-11-23 16:32:21 [scrapy.extensions.throttle] INFO: slot: 104.24.7.38 | conc: 2 | delay:  555 ms (-118) | latency:  437 ms | size:  9152 bytes
+2017-11-23 16:32:22 [scrapy.extensions.throttle] INFO: slot: 104.24.7.38 | conc: 1 | delay:  519 ms (-36) | latency:  483 ms | size:  7378 bytes
+2017-11-23 16:32:23 [scrapy.extensions.throttle] INFO: slot: 104.24.7.38 | conc: 2 | delay:  485 ms (-34) | latency:  451 ms | size:  8888 bytes
+2017-11-23 16:32:23 [scrapy.extensions.throttle] INFO: slot: 104.24.7.38 | conc: 1 | delay:  447 ms (-37) | latency:  410 ms | size:  7794 bytes
+2017-11-23 16:32:24 [scrapy.extensions.throttle] INFO: slot: 104.24.7.38 | conc: 2 | delay:  496 ms (+48) | latency:  496 ms | size:  8234 bytes
+2017-11-23 16:32:25 [scrapy.extensions.throttle] INFO: slot: 104.24.7.38 | conc: 2 | delay:  444 ms (-52) | latency:  392 ms | size:  8304 bytes
+2017-11-23 16:32:25 [scrapy.extensions.throttle] INFO: slot: 104.24.7.38 | conc: 2 | delay:  461 ms (+17) | latency:  461 ms | size:  9306 bytes
+2017-11-23 16:32:26 [scrapy.extensions.throttle] INFO: slot: 104.24.7.38 | conc: 2 | delay:  456 ms (-4) | latency:  452 ms | size:  8740 bytes
+2017-11-23 16:32:26 [scrapy.extensions.throttle] INFO: slot: 104.24.7.38 | conc: 2 | delay:  468 ms (+11) | latency:  468 ms | size:  8422 bytes
+2017-11-23 16:32:27 [scrapy.extensions.throttle] INFO: slot: 104.24.7.38 | conc: 2 | delay:  754 ms (+286) | latency:  754 ms | size:  7994 bytes
+2017-11-23 16:32:27 [scrapy.extensions.throttle] INFO: slot: 104.24.7.38 | conc: 1 | delay:  613 ms (-141) | latency:  472 ms | size:  7545 bytes
+2017-11-23 16:32:28 [scrapy.extensions.throttle] INFO: slot: 104.24.7.38 | conc: 1 | delay:  544 ms (-69) | latency:  475 ms | size:  7993 bytes
+2017-11-23 16:32:29 [scrapy.extensions.throttle] INFO: slot: 104.24.7.38 | conc: 2 | delay:  643 ms (+99) | latency:  643 ms | size:  7848 bytes
+2017-11-23 16:32:30 [scrapy.extensions.throttle] INFO: slot: 104.24.7.38 | conc: 2 | delay: 1000 ms (+356) | latency: 1044 ms | size:  7542 bytes
+2017-11-23 16:32:30 [scrapy.extensions.throttle] INFO: slot: 104.24.7.38 | conc: 1 | delay:  721 ms (-278) | latency:  443 ms | size:  7370 bytes
+2017-11-23 16:32:32 [scrapy.extensions.throttle] INFO: slot: 104.24.7.38 | conc: 2 | delay:  630 ms (-90) | latency:  540 ms | size:  8300 bytes
+2017-11-23 16:32:32 [scrapy.extensions.throttle] INFO: slot: 104.24.7.38 | conc: 2 | delay:  589 ms (-40) | latency:  549 ms | size:  8843 bytes
+2017-11-23 16:32:33 [scrapy.extensions.throttle] INFO: slot: 104.24.7.38 | conc: 1 | delay:  448 ms (-140) | latency:  308 ms | size:  7296 bytes
+2017-11-23 16:32:33 [scrapy.extensions.throttle] INFO: slot: 104.24.7.38 | conc: 1 | delay:  407 ms (-41) | latency:  366 ms | size:  7758 bytes
+2017-11-23 16:32:34 [scrapy.extensions.throttle] INFO: slot: 104.24.7.38 | conc: 2 | delay:  442 ms (+34) | latency:  442 ms | size:  8332 bytes
+2017-11-23 16:32:35 [scrapy.extensions.throttle] INFO: slot: 104.24.7.38 | conc: 2 | delay:  397 ms (-44) | latency:  353 ms | size:  7892 bytes
+2017-11-23 16:32:35 [scrapy.extensions.throttle] INFO: slot: 104.24.7.38 | conc: 2 | delay: 1000 ms (+602) | latency: 1073 ms | size:  7960 bytes
+2017-11-23 16:32:36 [scrapy.extensions.throttle] INFO: slot: 104.24.7.38 | conc: 1 | delay:  728 ms (-271) | latency:  456 ms | size:  8839 bytes
+2017-11-23 16:32:37 [scrapy.extensions.throttle] INFO: slot: 104.24.7.38 | conc: 1 | delay:  562 ms (-165) | latency:  397 ms | size:  7730 bytes
+2017-11-23 16:32:37 [scrapy.extensions.throttle] INFO: slot: 104.24.7.38 | conc: 1 | delay:  457 ms (-104) | latency:  353 ms | size:  7722 bytes
+2017-11-23 16:32:38 [scrapy.extensions.throttle] INFO: slot: 104.24.7.38 | conc: 2 | delay:  461 ms (+3) | latency:  461 ms | size:  8513 bytes
+2017-11-23 16:32:39 [scrapy.extensions.throttle] INFO: slot: 104.24.7.38 | conc: 2 | delay:  422 ms (-38) | latency:  384 ms | size:  7996 bytes
+2017-11-23 16:32:39 [scrapy.extensions.throttle] INFO: slot: 104.24.7.38 | conc: 2 | delay: 1000 ms (+577) | latency: 1076 ms | size:  7922 bytes
+2017-11-23 16:32:40 [scrapy.extensions.throttle] INFO: slot: 104.24.7.38 | conc: 1 | delay:  908 ms (-91) | latency:  817 ms | size:  8932 bytes
+2017-11-23 16:32:41 [scrapy.extensions.throttle] INFO: slot: 104.24.7.38 | conc: 1 | delay:  673 ms (-234) | latency:  439 ms | size:  7776 bytes
+2017-11-23 16:32:42 [scrapy.extensions.throttle] INFO: slot: 104.24.7.38 | conc: 2 | delay:  574 ms (-98) | latency:  476 ms | size:  7582 bytes
+2017-11-23 16:32:42 [scrapy.extensions.throttle] INFO: slot: 104.24.7.38 | conc: 1 | delay:  499 ms (-75) | latency:  424 ms | size:  7720 bytes
+2017-11-23 16:32:44 [scrapy.extensions.throttle] INFO: slot: 104.24.7.38 | conc: 3 | delay:  478 ms (-20) | latency:  458 ms | size:  8805 bytes
+2017-11-23 16:32:44 [scrapy.extensions.throttle] INFO: slot: 104.24.7.38 | conc: 3 | delay: 1000 ms (+521) | latency: 1704 ms | size:  8458 bytes
+2017-11-23 16:32:44 [scrapy.extensions.throttle] INFO: slot: 104.24.7.38 | conc: 2 | delay:  756 ms (-243) | latency:  513 ms | size:  7660 bytes
+2017-11-23 16:32:45 [scrapy.extensions.throttle] INFO: slot: 104.24.7.38 | conc: 1 | delay:  590 ms (-165) | latency:  425 ms | size:  8157 bytes
+2017-11-23 16:32:46 [scrapy.extensions.throttle] INFO: slot: 104.24.7.38 | conc: 2 | delay:  459 ms (-131) | latency:  328 ms | size:  7565 bytes
+2017-11-23 16:32:46 [scrapy.extensions.throttle] INFO: slot: 104.24.7.38 | conc: 2 | delay:  917 ms (+457) | latency:  917 ms | size:  8397 bytes
+2017-11-23 16:32:47 [scrapy.extensions.throttle] INFO: slot: 104.24.7.38 | conc: 1 | delay:  693 ms (-224) | latency:  469 ms | size:  8795 bytes
+2017-11-23 16:32:48 [scrapy.extensions.throttle] INFO: slot: 104.24.7.38 | conc: 1 | delay:  748 ms (+55) | latency:  748 ms | size:  8918 bytes
+2017-11-23 16:32:48 [scrapy.extensions.throttle] INFO: slot: 104.24.7.38 | conc: 1 | delay:  527 ms (-220) | latency:  307 ms | size:  8255 bytes
+2017-11-23 16:32:49 [scrapy.extensions.throttle] INFO: slot: 104.24.7.38 | conc: 2 | delay:  495 ms (-32) | latency:  463 ms | size:  8658 bytes
+2017-11-23 16:32:49 [scrapy.extensions.throttle] INFO: slot: 104.24.7.38 | conc: 2 | delay:  476 ms (-18) | latency:  458 ms | size:  8423 bytes
+2017-11-23 16:32:50 [scrapy.extensions.throttle] INFO: slot: 104.24.7.38 | conc: 2 | delay:  466 ms (-9) | latency:  457 ms | size:  7997 bytes
+2017-11-23 16:32:50 [scrapy.extensions.throttle] INFO: slot: 104.24.7.38 | conc: 1 | delay:  387 ms (-78) | latency:  309 ms | size:  8009 bytes
+2017-11-23 16:32:51 [scrapy.extensions.throttle] INFO: slot: 104.24.7.38 | conc: 2 | delay:  432 ms (+44) | latency:  432 ms | size:  7806 bytes
+2017-11-23 16:32:52 [scrapy.extensions.throttle] INFO: slot: 104.24.7.38 | conc: 3 | delay:  426 ms (-6) | latency:  420 ms | size:  8138 bytes
+2017-11-23 16:32:52 [scrapy.extensions.throttle] INFO: slot: 104.24.7.38 | conc: 2 | delay:  445 ms (+19) | latency:  445 ms | size:  8263 bytes
+2017-11-23 16:32:52 [scrapy.extensions.throttle] INFO: slot: 104.24.7.38 | conc: 1 | delay:  433 ms (-11) | latency:  422 ms | size:  7967 bytes
+2017-11-23 16:32:53 [scrapy.extensions.throttle] INFO: slot: 104.24.7.38 | conc: 1 | delay:  428 ms (-4) | latency:  424 ms | size:  7763 bytes
+2017-11-23 16:32:54 [scrapy.extensions.logstats] INFO: Crawled 249 pages (at 90 pages/min), scraped 243 items (at 90 items/min)
+2017-11-23 16:32:54 [scrapy.extensions.throttle] INFO: slot: 104.24.7.38 | conc: 3 | delay:  503 ms (+74) | latency:  503 ms | size:  7432 bytes
+2017-11-23 16:32:55 [scrapy.extensions.throttle] INFO: slot: 104.24.7.38 | conc: 3 | delay: 1000 ms (+496) | latency: 1232 ms | size:  8942 bytes
+2017-11-23 16:32:55 [scrapy.extensions.throttle] INFO: slot: 104.24.7.38 | conc: 2 | delay:  751 ms (-248) | latency:  503 ms | size:  8906 bytes
+2017-11-23 16:32:56 [scrapy.extensions.throttle] INFO: slot: 104.24.7.38 | conc: 2 | delay: 1000 ms (+248) | latency: 1142 ms | size:  7501 bytes
+2017-11-23 16:32:56 [scrapy.extensions.throttle] INFO: slot: 104.24.7.38 | conc: 1 | delay:  708 ms (-291) | latency:  416 ms | size:  7597 bytes
+2017-11-23 16:32:57 [scrapy.extensions.throttle] INFO: slot: 104.24.7.38 | conc: 2 | delay:  571 ms (-136) | latency:  435 ms | size:  8377 bytes
+2017-11-23 16:32:57 [scrapy.extensions.throttle] INFO: slot: 104.24.7.38 | conc: 1 | delay:  463 ms (-107) | latency:  356 ms | size:  7724 bytes
+2017-11-23 16:32:59 [scrapy.extensions.throttle] INFO: slot: 104.24.7.38 | conc: 2 | delay:  434 ms (-28) | latency:  406 ms | size:  7727 bytes
+2017-11-23 16:32:59 [scrapy.extensions.throttle] INFO: slot: 104.24.7.38 | conc: 2 | delay:  437 ms (+2) | latency:  437 ms | size:  8240 bytes
+2017-11-23 16:33:00 [scrapy.extensions.throttle] INFO: slot: 104.24.7.38 | conc: 2 | delay:  512 ms (+75) | latency:  512 ms | size:  7321 bytes
+2017-11-23 16:33:00 [scrapy.extensions.throttle] INFO: slot: 104.24.7.38 | conc: 2 | delay:  477 ms (-35) | latency:  442 ms | size:  8108 bytes
+2017-11-23 16:33:02 [scrapy.extensions.throttle] INFO: slot: 104.24.7.38 | conc: 3 | delay:  470 ms (-6) | latency:  464 ms | size:  8362 bytes
+2017-11-23 16:33:02 [scrapy.extensions.throttle] INFO: slot: 104.24.7.38 | conc: 3 | delay:  469 ms (+0) | latency:  469 ms | size:  7929 bytes
+2017-11-23 16:33:03 [scrapy.extensions.throttle] INFO: slot: 104.24.7.38 | conc: 2 | delay:  416 ms (-53) | latency:  363 ms | size:  7701 bytes
+2017-11-23 16:33:03 [scrapy.extensions.throttle] INFO: slot: 104.24.7.38 | conc: 3 | delay:  529 ms (+112) | latency:  529 ms | size:  9017 bytes
+2017-11-23 16:33:04 [scrapy.extensions.throttle] INFO: slot: 104.24.7.38 | conc: 3 | delay:  496 ms (-32) | latency:  464 ms | size:  8376 bytes
+2017-11-23 16:33:04 [scrapy.extensions.throttle] INFO: slot: 104.24.7.38 | conc: 2 | delay:  435 ms (-60) | latency:  375 ms | size:  7407 bytes
+2017-11-23 16:33:05 [scrapy.extensions.throttle] INFO: slot: 104.24.7.38 | conc: 1 | delay:  568 ms (+132) | latency:  568 ms | size:  8423 bytes
+2017-11-23 16:33:06 [scrapy.extensions.throttle] INFO: slot: 104.24.7.38 | conc: 3 | delay:  488 ms (-80) | latency:  408 ms | size:  9231 bytes
+2017-11-23 16:33:06 [scrapy.extensions.throttle] INFO: slot: 104.24.7.38 | conc: 2 | delay:  422 ms (-66) | latency:  356 ms | size:  7389 bytes
+2017-11-23 16:33:08 [scrapy.extensions.throttle] INFO: slot: 104.24.7.38 | conc: 4 | delay:  490 ms (+68) | latency:  490 ms | size:  7237 bytes
+2017-11-23 16:33:08 [scrapy.extensions.throttle] INFO: slot: 104.24.7.38 | conc: 3 | delay:  459 ms (-30) | latency:  429 ms | size:  8313 bytes
+2017-11-23 16:33:08 [scrapy.extensions.throttle] INFO: slot: 104.24.7.38 | conc: 2 | delay:  452 ms (-6) | latency:  446 ms | size:  9287 bytes
+2017-11-23 16:33:08 [scrapy.extensions.throttle] INFO: slot: 104.24.7.38 | conc: 1 | delay:  419 ms (-32) | latency:  387 ms | size:  8532 bytes
+2017-11-23 16:33:09 [scrapy.extensions.throttle] INFO: slot: 104.24.7.38 | conc: 2 | delay:  488 ms (+68) | latency:  488 ms | size:  9276 bytes
+2017-11-23 16:33:10 [scrapy.extensions.throttle] INFO: slot: 104.24.7.38 | conc: 2 | delay:  466 ms (-21) | latency:  445 ms | size:  7979 bytes
+2017-11-23 16:33:10 [scrapy.extensions.throttle] INFO: slot: 104.24.7.38 | conc: 2 | delay:  438 ms (-27) | latency:  411 ms | size:  9375 bytes
+2017-11-23 16:33:11 [scrapy.extensions.throttle] INFO: slot: 104.24.7.38 | conc: 2 | delay:  403 ms (-35) | latency:  368 ms | size:  7821 bytes
+2017-11-23 16:33:11 [scrapy.extensions.throttle] INFO: slot: 104.24.7.38 | conc: 3 | delay:  621 ms (+217) | latency:  621 ms | size:  7234 bytes
+2017-11-23 16:33:12 [scrapy.extensions.throttle] INFO: slot: 104.24.7.38 | conc: 2 | delay:  543 ms (-77) | latency:  466 ms | size:  8988 bytes
+2017-11-23 16:33:12 [scrapy.extensions.throttle] INFO: slot: 104.24.7.38 | conc: 1 | delay:  959 ms (+415) | latency:  959 ms | size:  8771 bytes
+2017-11-23 16:33:13 [scrapy.extensions.throttle] INFO: slot: 104.24.7.38 | conc: 1 | delay:  904 ms (-54) | latency:  850 ms | size:  8779 bytes
+2017-11-23 16:33:14 [scrapy.extensions.throttle] INFO: slot: 104.24.7.38 | conc: 1 | delay:  727 ms (-176) | latency:  551 ms | size:  8211 bytes
+2017-11-23 16:33:15 [scrapy.extensions.throttle] INFO: slot: 104.24.7.38 | conc: 1 | delay:  592 ms (-134) | latency:  458 ms | size:  7748 bytes
+2017-11-23 16:33:17 [scrapy.extensions.throttle] INFO: slot: 104.24.7.38 | conc: 2 | delay:  596 ms (+3) | latency:  596 ms | size:  8216 bytes
+2017-11-23 16:33:17 [scrapy.extensions.throttle] INFO: slot: 104.24.7.38 | conc: 2 | delay:  570 ms (-25) | latency:  545 ms | size:  7798 bytes
+2017-11-23 16:33:18 [scrapy.extensions.throttle] INFO: slot: 104.24.7.38 | conc: 2 | delay:  522 ms (-48) | latency:  474 ms | size:  9217 bytes
+2017-11-23 16:33:18 [scrapy.extensions.throttle] INFO: slot: 104.24.7.38 | conc: 1 | delay:  483 ms (-39) | latency:  444 ms | size:  7150 bytes
+2017-11-23 16:33:19 [scrapy.extensions.throttle] INFO: slot: 104.24.7.38 | conc: 2 | delay:  606 ms (+122) | latency:  606 ms | size:  8356 bytes
+2017-11-23 16:33:19 [scrapy.extensions.throttle] INFO: slot: 104.24.7.38 | conc: 1 | delay:  485 ms (-120) | latency:  365 ms | size:  7846 bytes
+2017-11-23 16:33:20 [scrapy.extensions.throttle] INFO: slot: 104.24.7.38 | conc: 2 | delay:  809 ms (+323) | latency:  809 ms | size:  7843 bytes
+2017-11-23 16:33:21 [scrapy.extensions.throttle] INFO: slot: 104.24.7.38 | conc: 2 | delay: 1000 ms (+190) | latency: 1224 ms | size:  7272 bytes
+2017-11-23 16:33:22 [scrapy.extensions.throttle] INFO: slot: 104.24.7.38 | conc: 2 | delay:  737 ms (-262) | latency:  475 ms | size:  7989 bytes
+2017-11-23 16:33:22 [scrapy.extensions.throttle] INFO: slot: 104.24.7.38 | conc: 1 | delay:  581 ms (-156) | latency:  425 ms | size:  8702 bytes
+2017-11-23 16:33:24 [scrapy.extensions.throttle] INFO: slot: 104.24.7.38 | conc: 1 | delay:  523 ms (-57) | latency:  466 ms | size:  7757 bytes
+2017-11-23 16:33:24 [scrapy.extensions.throttle] INFO: slot: 104.24.7.38 | conc: 2 | delay:  510 ms (-13) | latency:  497 ms | size:  8364 bytes
+2017-11-23 16:33:25 [scrapy.extensions.throttle] INFO: slot: 104.24.7.38 | conc: 2 | delay:  514 ms (+3) | latency:  514 ms | size:  7827 bytes
+2017-11-23 16:33:25 [scrapy.crawler] INFO: Received SIGINT, shutting down gracefully. Send again to force 
+2017-11-23 16:33:25 [scrapy.core.engine] INFO: Closing spider (shutdown)
+2017-11-23 16:33:25 [scrapy.extensions.throttle] INFO: slot: 104.24.7.38 | conc: 2 | delay:  436 ms (-78) | latency:  358 ms | size:  8333 bytes
+2017-11-23 16:33:26 [scrapy.extensions.throttle] INFO: slot: 104.24.7.38 | conc: 1 | delay:  464 ms (+28) | latency:  464 ms | size:  8547 bytes
+2017-11-23 16:33:27 [scrapy.extensions.throttle] INFO: slot: 104.24.7.38 | conc: 2 | delay:  700 ms (+236) | latency:  700 ms | size:  7327 bytes
+2017-11-23 16:33:28 [scrapy.extensions.throttle] INFO: slot: 104.24.7.38 | conc: 1 | delay:  596 ms (-103) | latency:  493 ms | size:  8184 bytes

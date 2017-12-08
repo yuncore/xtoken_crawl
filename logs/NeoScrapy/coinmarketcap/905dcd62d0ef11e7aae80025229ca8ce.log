@@ -1,0 +1,19 @@
+2017-11-24 16:15:03 [scrapy.utils.log] INFO: Scrapy 1.4.0 started (bot: NeoScrapy)
+2017-11-24 16:15:03 [scrapy.utils.log] INFO: Overridden settings: {'DOWNLOAD_DELAY': 0.25, 'CONCURRENT_REQUESTS_PER_IP': 16, 'LOG_LEVEL': 'INFO', 'AUTOTHROTTLE_ENABLED': True, 'AUTOTHROTTLE_MAX_DELAY': 1, 'LOG_FILE': 'logs\\NeoScrapy\\coinmarketcap\\905dcd62d0ef11e7aae80025229ca8ce.log', 'CONCURRENT_REQUESTS_PER_DOMAIN': 16, 'AUTOTHROTTLE_START_DELAY': 0, 'CONCURRENT_REQUESTS': 32, 'AUTOTHROTTLE_DEBUG': True, 'BOT_NAME': 'NeoScrapy', 'NEWSPIDER_MODULE': 'NeoScrapy.spiders', 'SPIDER_MODULES': ['NeoScrapy.spiders'], 'COOKIES_ENABLED': False}
+2017-11-24 16:15:03 [scrapy.middleware] INFO: Enabled extensions:
+['scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.throttle.AutoThrottle',
+ 'scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.logstats.LogStats']
+2017-11-24 16:15:03 [twisted] CRITICAL: Unhandled error in Deferred:
+2017-11-24 16:15:03 [twisted] CRITICAL: 
+Traceback (most recent call last):
+  File "c:\users\divisey\appdata\local\programs\python\python35\lib\site-packages\twisted\internet\defer.py", line 1386, in _inlineCallbacks
+    result = g.send(result)
+  File "c:\users\divisey\appdata\local\programs\python\python35\lib\site-packages\scrapy\crawler.py", line 76, in crawl
+    self.spider = self._create_spider(*args, **kwargs)
+  File "c:\users\divisey\appdata\local\programs\python\python35\lib\site-packages\scrapy\crawler.py", line 99, in _create_spider
+    return self.spidercls.from_crawler(self, *args, **kwargs)
+  File "c:\users\divisey\appdata\local\programs\python\python35\lib\site-packages\scrapy\spiders\__init__.py", line 51, in from_crawler
+    spider = cls(*args, **kwargs)
+TypeError: __init__() got an unexpected keyword argument '_job'
