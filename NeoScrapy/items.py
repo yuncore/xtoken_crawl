@@ -10,10 +10,20 @@ import scrapy
 
 class CoinMarketItem(scrapy.Item):
     name = scrapy.Field()
+    id = scrapy.Field()
     symbol = scrapy.Field()
     sort = scrapy.Field()
-    url = scrapy.Field()
     subreddit = scrapy.Field()
+    url = scrapy.Field()
+    logo_url = scrapy.Field()
+    logo_img_name = scrapy.Field()
+    website  = scrapy.Field()
+    topic_id = scrapy.Field()
+    explorer = scrapy.Field()
+    github_repo = scrapy.Field()
+    github_project = scrapy.Field()
+    message_board = scrapy.Field()
+    chat = scrapy.Field()
 
 
 class TokenMarketItem(scrapy.Item):
@@ -57,15 +67,7 @@ class BitCoinTalkComment(scrapy.Item):
     time = scrapy.Field()
     title = scrapy.Field()
     content = scrapy.Field()
-
-
-# 对于不确定字段的情况将所有的字段添加到data dict中
-class BitCoinTalkUserProfile(scrapy.Item):
-    data = scrapy.Field()
-
-
-class BitCoinTalkUserStat(scrapy.Item):
-    data = scrapy.Field()
+    quote_id = scrapy.Field()
 
 
 class BitCoinTalkUserHistory(scrapy.Item):
@@ -80,3 +82,4 @@ class BitCoinTalkUserHistory(scrapy.Item):
     msg_id = scrapy.Field()
     content = scrapy.Field()
     time = scrapy.Field()
+    quote_id = scrapy.Field()

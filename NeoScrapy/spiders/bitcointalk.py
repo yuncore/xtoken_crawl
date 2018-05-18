@@ -1,13 +1,10 @@
 import scrapy
-import pickle
-import zlib
 import time
 import re
-import json
 import pymongo
+from NeoScrapy.db import NeoData
 from lxml import html
 from datetime import datetime
-from bson.binary import Binary
 from NeoScrapy.settings import MONGO_URI, MONGO_PORT, MONGO_DATABASE
 from NeoScrapy.items import BitCoinTalkLink, BitCoinTalkComment, BitCoinTalkUserHistory
 
@@ -18,11 +15,11 @@ class BttSpider(scrapy.Spider):
 
     def __init__(self, *args, **kwargs):
         """
-        :param func: 必填参数，指定该spider实例的功能。
+        func: 必填参数，指定该spider实例的功能。
             ANNLINK : 获取announcement 模块下的所有帖子
             COMMENT : 获取帖子下的评论,必须参数 ids | array
-            USER_PROFILE :  获取用户基本信息，统计信息, 必须参数 ids | array
-            USER_HISTORY : 获取用户的历史足迹，必须参数 ids | array
+            USER :  获取用户基本信息，统计信息, 必须参数 ids | array
+        force: 可选参数，当force为true时强制获取所有的时间段内的评论，否则截止到数据库中最新的时间为止
         """
         super(BttSpider, self).__init__(*args, **kwargs)
         self.client = pymongo.MongoClient(MONGO_URI, MONGO_PORT)
@@ -33,32 +30,42 @@ class BttSpider(scrapy.Spider):
         self.USER_POST_URL = 'https://bitcointalk.org/index.php?action=profile;u={0};sa=showPosts'
         self.USER_START_URL = 'https://bitcointalk.org/index.php?action=profile;threads;u={0};sa=showPosts'
         self.USER_STAT_URL = 'https://bitcointalk.org/index.php?action=profile;u={0};sa=statPanel'
-        self.page = 0
-        self.latest = []
-        if 'func' in kwargs and kwargs['func'] in ['ANNLINK', 'COMMENT', 'USER_PROFILE', 'USER_HISTORY']:
+        self.latest = 0
+        if 'func' in kwargs and kwargs['func'] in ['ANNLINK', 'COMMENT', 'USER']:
             self.func = kwargs['func']
+            self.logger.info('[func] {0}'.format(self.func))
         if 'ids' in kwargs:
             self.ids = kwargs['ids']
+            self.logger.info('[ids] {0}'.format(self.ids))
+        if 'force' in kwargs:
+            if kwargs['force'] == 'True':
+                self.force = True
+            else:
+                self.force = False
+            self.logger.info('[force] {0}'.format(self.force))
 
     def start_requests(self):
         if self.func == 'ANNLINK':
-            scrapy.Request(self.ANN_LINK_URL, callback=self.ann_link_parse, meta={'index': 0})
+            yield scrapy.Request(self.ANN_LINK_URL, callback=self.ann_link_parse, meta={'index': 0})
         if self.func == 'COMMENT':
             link_id = self.ids
-            yield scrapy.Request(self.COMMENT_URL.format(link_id), callback=self.comment_parse,
+            yield scrapy.Request(self.COMMENT_URL.format(link_id), callback=self.comment_parse_prepare,
                                  meta={'index': 0, 'link_id': link_id})
-        if self.func == 'USER_PROFILE':
+        if self.func == 'USER':
             user_id = self.ids
             yield scrapy.Request(self.USER_PROFILE_URL.format(user_id), callback=self.user_profile_parse,
                                  meta={'user_id': user_id})
-            yield scrapy.Request(self.USER_STAT_URL.format(user_id), callback=self.user_stat_parse,
-                                 meta={'user_id': user_id})
-            yield scrapy.Request(self.USER_START_URL.format(user_id), callback=self.user_history_parse,
-                                 meta={'user_id': user_id, 'index': 0, 'start': True})
-            yield scrapy.Request(self.USER_POST_URL.format(user_id), callback=self.user_history_parse,
-                                 meta={'user_id': user_id, 'index': 0, 'start': False})
+            # btt的user stat 页面已经坏掉了
+            # yield scrapy.Request(self.USER_STAT_URL.format(user_id), callback=self.user_stat_parse,
+            #                     meta={'user_id': user_id})
+            # 现在不需要获取用户的全部历史数据
+            # yield scrapy.Request(self.USER_START_URL.format(user_id), callback=self.user_history_parse_prepare,
+            #                      meta={'user_id': user_id, 'index': 0, 'start': True})
+            # yield scrapy.Request(self.USER_POST_URL.format(user_id), callback=self.user_history_parse_prepare,
+            #                      meta={'user_id': user_id, 'index': 0, 'start': False})
 
     def ann_link_parse(self, response):
+        self.logger.info('[func] ann_link_parse [url] {0}'.format(response.url))
         tree = html.fromstring(response.text)
         # index为0标识第一页，计算page总数并依次获取后续页面
         if response.meta['index'] == 0:
@@ -87,25 +94,53 @@ class BttSpider(scrapy.Spider):
             yield link
 
     def comment_parse_prepare(self, response):
+        """
+        计算总页数，从最后一页开始下载
+        :param response:
+        :return:
+        """
         tree = html.fromstring(response.text)
         link_id = response.meta['link_id']
         # index为0标识第一页，计算page总数并依次获取后续页面
         # 只有一页，这时候td标签下没有<a>标签
         # 页数较少，一般小于25页时，最后一个<a>标签内容为'all',此时倒数第二个<a>标签的内容为总页数
         # 页数较多，没有'all'最后一个<a>标签的内容为总页数
-        if len(tree.xpath('//*[@id="bodyarea"]/table[1]/tr/td/a')) == 0:
+        # 特殊情况下，btt页面的页数table上面会有一个投票的table，这时计算的页数就不准了。所以需要判断第一bodyarea的第一个table是否是投票table
+        table_index = 1
+        src = tree.xpath('//*[@id="bodyarea"]/table[1]/tr/td/img/@src')
+        if len(src) > 0 and src[0] == 'https://bitcointalk.org/Themes/custom1/images/topic/normal_poll.gif':
+            table_index = 2
+        if len(tree.xpath('//*[@id="bodyarea"]/table[{0}]/tr/td/a'.format(table_index))) == 0:
             page = 1
-        elif tree.xpath('//*[@id="bodyarea"]/table[1]/tr/td/a[last()]')[0].text == 'All':
-            page = int(tree.xpath('//*[@id="bodyarea"]/table[1]/tr/td/a[last()-1]')[0].text)
+        elif tree.xpath('//*[@id="bodyarea"]/table[{0}]/tr/td/a[last()]'.format(table_index))[0].text == 'All':
+            page = int(tree.xpath('//*[@id="bodyarea"]/table[{0}]/tr/td/a[last()-1]'.format(table_index))[0].text)
         else:
-            page = int(tree.xpath('//*[@id="bodyarea"]/table[1]/tr/td/a[last()]')[0].text)
-        for i in range(0, page):
-            url = self.COMMENT_URL.format(link_id + '.' + str(i * 2) + '0')
-            yield scrapy.Request(url, callback=self.comment_parse, meta={'index': i, 'link_id': link_id})
+            page = int(tree.xpath('//*[@id="bodyarea"]/table[{0}]/tr/td/a[last()]'.format(table_index))[0].text)
+        self.latest = self.latest_comment(link_id)
+        url = self.COMMENT_URL.format(link_id + '.' + str(page * 2) + '0')
+        yield scrapy.Request(url, callback=self.comment_parse, meta={'index': page, 'link_id': link_id})
+
+    def latest_comment(self, link_id):
+        """
+        从数据数据库中查询最新的一条评论，返回该条评论的时间戳
+        :param link_id:
+        :return:
+        """
+        try:
+            return self.db[NeoData.BTT_COMMENT].find({'data.link_id': link_id}).sort([('data.time', pymongo.DESCENDING)]).limit(1)[1]['data']['time']
+        except IndexError:
+            return 0
 
     def comment_parse(self, response):
+        """
+        提取页面信息，将提取到的记录与数据库中最新一条记录的时间对比，确定是否需要发送下一条请求
+        :param response:
+        :return:
+        """
+        self.logger.info('[func] comment_parse [url] {0} [page] {1}'.format(response.url, response.meta['index']))
         tree = html.fromstring(response.text)
         link_id = response.meta['link_id']
+        next_request = True
         for tr in tree.xpath('//*[@id="quickModForm"]/table[1]/tr'):
             comment = BitCoinTalkComment()
             # 遍历quickModForm下的每一个tr对象
@@ -150,11 +185,18 @@ class BttSpider(scrapy.Spider):
                 time_str = hearder_post.xpath('descendant::*[@class="smalltext"]')[0].text_content()
                 comment['time'] = self.time_format(time_str)
                 comment['title'] = hearder_post.xpath('descendant::*[@class="subject"]/a/text()')[0]
-                html_string = html.tostring(hearder_post.xpath('descendant::*[@class="post"]')[0])
-                comment['content'] = Binary(zlib.compress(pickle.dumps(html_string)))
+                content_aly = self.aly_content(hearder_post.xpath('descendant::*[@class="post"]')[0])
+                comment['content'] = content_aly['content']
+                comment['quote_id'] = content_aly['quote_id']
+                if comment['time'] < self.latest:
+                    next_request = False
             except Exception as e:
                 self.logger.error('comment parse error {0} {1}'.format(response.url, str(e)))
             yield comment
+        page = response.meta['index'] - 1
+        if page >= 0 and (self.force or next_request):
+            url = self.COMMENT_URL.format(link_id + '.' + str(page * 2) + '0')
+            yield scrapy.Request(url, callback=self.comment_parse, meta={'index': page, 'link_id': link_id})
 
     def user_profile_parse(self, response):
         tree = html.fromstring(response.text)
@@ -172,7 +214,7 @@ class BttSpider(scrapy.Spider):
                     try:
                         value = int(value)
                     except Exception as e:
-                        self.logger.error('transfer string to int error {0} {1}'.format(response.url, str(e)))
+                        self.logger.info('transfer string to int error key = {0}'.format(key))
                 user[key] = value
             except Exception as e:
                 self.logger.error('parse user profile error {0} {1}'.format(response.url, str(e)))
@@ -184,6 +226,8 @@ class BttSpider(scrapy.Spider):
         user_id = response.meta['user_id']
         panels = tree.xpath('//*[@id="bodyarea"]//*[@class="windowbg2"]')
         general_stat = {}
+        if panels is None:
+            return
         for tr in panels[0].xpath('table/tr'):
             try:
                 key = self.text_format(tr.findall('td')[0].text)
@@ -221,24 +265,34 @@ class BttSpider(scrapy.Spider):
         self.db['btt_stat'].find_one_and_update({'_id': stat['user_id']},
                                                 {'$set': {'timestamp': datetime.now(), 'data': stat}}, upsert=True)
 
+    def user_history_parse_prepare(self, response):
+        tree = html.fromstring(response.text)
+        start = response.meta['start']
+        user_id = response.meta['user_id']
+        url_base = self.USER_START_URL if start else self.USER_POST_URL
+        if len(tree.xpath('//*[@class="catbg3"]/a[last()]')) == 0:
+            page = 1
+        elif tree.xpath('//*[@class="catbg3"]/a[last()]')[0].text == 'All':
+            page = int(tree.xpath('//*[@class="catbg3"]/a[last()-1]')[0].text)
+        else:
+            page = int(tree.xpath('//*[@class="catbg3"]/a[last()]')[0].text)
+        self.latest = self.history_latest(user_id, start)
+        url = url_base.format(user_id) + ';start={0}'.format(0 * 20)
+        yield scrapy.Request(url, callback=self.user_history_parse,
+                             meta={'user_id': user_id, 'index': 0, 'url_base': url_base, 'page': page, 'start': start})
+
+    def history_latest(self, user_id, start):
+        col = 'btt_history_start' if start else 'btt_history_post'
+        try:
+            return self.db[col].find({'data.user_id': user_id}).sort([('data.time', pymongo.DESCENDING)]).limit(1)['data'][time]
+        except Exception:
+            return 0
+
     def user_history_parse(self, response):
+        self.logger.info('[func] user_history_parse [url] {0} [page] {1}'.format(response.url, response.meta['index']))
         tree = html.fromstring(response.text)
         user_id = response.meta['user_id']
-        if response.meta['start']:
-            url_base = self.USER_START_URL
-        else:
-            url_base = self.USER_POST_URL
-        if response.meta['index'] == 0:
-            if len(tree.xpath('//*[@class="catbg3"]/a[last()]')) == 0:
-                page = 1
-            elif tree.xpath('//*[@class="catbg3"]/a[last()]')[0].text == 'All':
-                page = int(tree.xpath('//*[@class="catbg3"]/a[last()-1]')[0].text)
-            else:
-                page = int(tree.xpath('//*[@class="catbg3"]/a[last()]')[0].text)
-            for i in range(1, page):
-                yield scrapy.Request(url_base.format(user_id) + ';start={0}'.format(i * 20),
-                                     callback=self.user_history_parse,
-                                     meta={'user_id': user_id, 'index': i, 'start': response.meta['start']})
+        next_request = True
         tables = tree.xpath('//*[@id="bodyarea"]/table/tr/td/table')
         del tables[0]
         del tables[-1]
@@ -254,13 +308,45 @@ class BttSpider(scrapy.Spider):
                 post['href'] = href
                 post['topic_id'] = href[href.index('=') + 1:href.rfind('.')]
                 post['msg_id'] = href[href.index('#') + 1:]
-                html_string = html.tostring(table.xpath('descendant::*[@class="post"]')[0])
-                post['content'] = Binary(zlib.compress(pickle.dumps(html_string)))
+                content_aly = self.aly_content(table.xpath('descendant::*[@class="post"]')[0])
+                post['content'] = content_aly['content']
+                post['quote_id'] = content_aly['quote_id']
                 time_text = table.xpath('descendant::td[@class="middletext"]')[1].text.replace('on:', '')
                 post['time'] = self.time_format(self.text_format(time_text))
+                if post['time'] < self.latest:
+                    next_request = False
             except Exception as e:
                 self.logger.error('parse user history error {0} {1}'.format(response.url, str(e)))
             yield post
+        page = response.meta['page']
+        index = response.meta['index']
+        url_base = response.meta['url_base']
+        start = response.meta['start']
+        if index < page and (self.force or next_request):
+            url = url_base.format(user_id) + ';start={0}'.format((index + 1) * 20)
+            yield scrapy.Request(url, callback=self.user_history_parse,
+                                 meta={'user_id': user_id, 'index': (index+1), 'url_base': url_base, 'page': page, 'start': start})
+
+    def aly_content(self, tree):
+        text = self.extract_comment(tree)
+        quote_id = None
+        try:
+            quote = tree.xpath('child::*[@class="quoteheader"]/a')[0].attrib['href']
+            quote_id = quote[quote.index('#') + 1:]
+        except (IndexError, ValueError):
+            pass
+        finally:
+            return {'content': text, 'quote_id': quote_id}
+
+    @staticmethod
+    def extract_comment(tree):
+        s = tree.text if tree.text is not None else ''
+        for item in tree.getchildren():
+            if item.text is not None:
+                s += item.text
+            elif item.tail is not None:
+                s += item.tail
+        return s
 
     @staticmethod
     def time_format(time_str):

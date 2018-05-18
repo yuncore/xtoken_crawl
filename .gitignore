@@ -1,0 +1,17 @@
+/build
+/crawls
+/dbs
+/eggs
+/logs
+/NeoScrapy/setting.py
+/project.egg-info
+/setup.py
+
+
+# Editor directories and files
+.idea
+.vscode
+*.suo
+*.ntvs*
+*.njsproj
+*.sln

@@ -14,10 +14,10 @@ BOT_NAME = 'NeoScrapy'
 SPIDER_MODULES = ['NeoScrapy.spiders']
 NEWSPIDER_MODULE = 'NeoScrapy.spiders'
 
-MONGO_URI = '192.168.1.222'
-MONGO_DATABASE = 'neo_crawl_data'
-MONGO_STATBASE = 'neo_stat_data'
-MONGO_RELATIONBASE = 'neo_relation_data'
+MONGO_URI = 'xxxx'
+MONGO_DATABASE = 'xxxxx'
+MONGO_STATBASE = 'xxxxxx'
+MONGO_RELATIONBASE = 'xxxxxx'
 MONGO_PORT = 27017
 
 REDDIT_CLIENT_ID = 'htwdLJ6yD_O9oQ'
