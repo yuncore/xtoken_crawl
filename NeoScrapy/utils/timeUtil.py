@@ -39,4 +39,4 @@ def Normaltime(datetime1):
 
 
 def test_git():
-    pass
+    print('测试使用github')
