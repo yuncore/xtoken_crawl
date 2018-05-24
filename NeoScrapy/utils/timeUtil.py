@@ -36,3 +36,7 @@ def Localtime(datetime1):
 def Normaltime(datetime1):
     Normaltime = datetime.datetime.strptime(datetime1, '%Y-%m-%d %H:%M:%S')
     return Normaltime
+
+
+def test_git():
+    pass
