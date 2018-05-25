@@ -5,7 +5,8 @@ import pymongo
 from NeoScrapy.db import NeoData
 from lxml import html
 from datetime import datetime
-from NeoScrapy.settings import MONGO_URI, MONGO_PORT, MONGO_DATABASE
+from NeoScrapy.settings import MONGO_DATABASE
+from NeoScrapy.db import CLIENT
 from NeoScrapy.items import BitCoinTalkLink, BitCoinTalkComment, BitCoinTalkUserHistory
 
 
@@ -22,7 +23,7 @@ class BttSpider(scrapy.Spider):
         force: 可选参数，当force为true时强制获取所有的时间段内的评论，否则截止到数据库中最新的时间为止
         """
         super(BttSpider, self).__init__(*args, **kwargs)
-        self.client = pymongo.MongoClient(MONGO_URI, MONGO_PORT)
+        self.client = CLIENT
         self.db = self.client[MONGO_DATABASE]
         self.ANN_LINK_URL = 'https://bitcointalk.org/index.php?board=159.'
         self.COMMENT_URL = 'https://bitcointalk.org/index.php?topic={0}'

@@ -1,11 +1,9 @@
 import scrapy
 import re
-import pymongo
-import json
 from lxml import html
 from NeoScrapy.items import CoinMarketItem
-from NeoScrapy.settings import MONGO_URI, MONGO_PORT, MONGO_DATABASE, GITHUB_CLIENT_ID, GITHUB_SECRET
-from NeoScrapy.db import NeoData
+from NeoScrapy.settings import MONGO_DATABASE
+from NeoScrapy.db import NeoData, CLIENT
 
 
 class CoinMarketCapSpider(scrapy.Spider):
@@ -14,7 +12,7 @@ class CoinMarketCapSpider(scrapy.Spider):
 
     def __init__(self, *args, **kwargs):
         super(CoinMarketCapSpider, self).__init__(*args, **kwargs)
-        self.client = pymongo.MongoClient(MONGO_URI, MONGO_PORT)
+        self.client = CLIENT
         self.db = self.client[MONGO_DATABASE]
         self.kwargs = kwargs
         self.PRICE_BASE = 'https://graphs2.coinmarketcap.com/currencies/{0}/'
@@ -47,6 +45,9 @@ class CoinMarketCapSpider(scrapy.Spider):
                                      meta={'type': 'DOMINANCE'})
         except KeyError:
             self.logger.error('required argument missed')
+
+    def parse(self, response):
+        pass
 
     def currency_parse(self, response):
         tree = html.fromstring(response.text)

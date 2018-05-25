@@ -8,17 +8,22 @@
 #     http://doc.scrapy.org/en/latest/topics/settings.html
 #     http://scrapy.readthedocs.org/en/latest/topics/downloader-middleware.html
 #     http://scrapy.readthedocs.org/en/latest/topics/spider-middleware.html
-
 BOT_NAME = 'NeoScrapy'
 
 SPIDER_MODULES = ['NeoScrapy.spiders']
 NEWSPIDER_MODULE = 'NeoScrapy.spiders'
 
-MONGO_URI = '192.168.1.222'
+# MONGO_URI = '192.168.1.222'
+# MONGO_PORT = 27017
+
+MONGO_URI = '1o746k7976.51mypc.cn'
+MONGO_PORT = 31006
+MONGOUSER = 'llps'
+MONGOPASSWORD = 'llps&789'
+
 MONGO_DATABASE = 'neo_crawl_data'
 MONGO_STATBASE = 'neo_stat_data'
 MONGO_RELATIONBASE = 'neo_relation_data'
-MONGO_PORT = 27017
 
 REDDIT_CLIENT_ID = 'htwdLJ6yD_O9oQ'
 REDDIT_SECRET_KEY = '3qyClBiaXZgZm1k7ScGBbzH20VQ'

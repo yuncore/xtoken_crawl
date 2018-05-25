@@ -1,7 +1,5 @@
-from NeoScrapy.settings import MONGO_URI, MONGO_PORT, MONGO_DATABASE, GITHUB_CLIENT_ID, GITHUB_SECRET
-from NeoScrapy.db import NeoData
-import time
-import pymongo
+from NeoScrapy.settings import MONGO_DATABASE, GITHUB_CLIENT_ID, GITHUB_SECRET
+from NeoScrapy.db import NeoData, CLIENT
 import scrapy
 import json
 
@@ -16,7 +14,7 @@ class GithubSpider(scrapy.Spider):
         :param kwargs:
         """
         super(GithubSpider, self).__init__(*args, **kwargs)
-        self.client = pymongo.MongoClient(MONGO_URI, MONGO_PORT)
+        self.client = CLIENT
         self.db = self.client[MONGO_DATABASE]
         append = "?client_id=" + GITHUB_CLIENT_ID + '&client_secret=' + GITHUB_SECRET + '&&per_page=100'
         self.REPOS_BASE = "https://api.github.com/repos/{0}" + append
@@ -41,6 +39,9 @@ class GithubSpider(scrapy.Spider):
                                      meta={'full_name': full_name, 'with_user': with_user})
         except KeyError:
             self.logger.error('required argument missed')
+
+    def parse(self, response):
+        pass
 
     def project_parse(self, response):
         self.logger.info('[func] repos parse [url] {0}'.format(response.url))
@@ -141,8 +142,3 @@ class GithubSpider(scrapy.Spider):
                                                        'type': 'scf'},
                                                       {'$set': item},
                                                       upsert=True)
-
-
-if __name__ == '__main__':
-    client = pymongo.MongoClient(MONGO_URI, MONGO_PORT)
-    db = client[MONGO_DATABASE]

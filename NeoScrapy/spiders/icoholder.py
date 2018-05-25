@@ -3,8 +3,8 @@ import pymongo
 import time
 import re
 from lxml import html
-from NeoScrapy.settings import MONGO_URI, MONGO_PORT, MONGO_DATABASE
-from NeoScrapy.db import NeoData
+from NeoScrapy.settings import MONGO_DATABASE
+from NeoScrapy.db import NeoData, CLIENT
 
 
 class IcoHolderSpider(scrapy.Spider):
@@ -12,7 +12,7 @@ class IcoHolderSpider(scrapy.Spider):
     allow_domain = 'icoholder.com'
     prefile = 'https://icoholder.com'
     start_urls = ['https://icoholder.com/en/icos/past?sort=r.general&direction=desc&page=0']
-    client = pymongo.MongoClient(MONGO_URI, MONGO_PORT)
+    client = CLIENT
     db = client[MONGO_DATABASE]
 
     def parse(self, response):

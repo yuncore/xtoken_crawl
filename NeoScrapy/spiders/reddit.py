@@ -1,7 +1,6 @@
-from NeoScrapy.settings import MONGO_URI, MONGO_PORT, MONGO_DATABASE
-from NeoScrapy.db import NeoData
+from NeoScrapy.settings import MONGO_DATABASE
+from NeoScrapy.db import NeoData, CLIENT
 import time
-import pymongo
 import scrapy
 import json
 
@@ -21,7 +20,7 @@ class RedditSpider(scrapy.Spider):
         force: 当func == comment的时候，force为true表示获取数据库中所有帖子的评论
         """
         super(RedditSpider, self).__init__(*args, **kwargs)
-        self.client = pymongo.MongoClient(MONGO_URI, MONGO_PORT)
+        self.client = CLIENT
         self.db = self.client[MONGO_DATABASE]
         self.LINK_BASE = ['https://oauth.reddit.com/r/{0}/new?limit=100',
                           'https://oauth.reddit.com/r/{0}/hot?limit=100&sort=top&t=all',
@@ -74,6 +73,9 @@ class RedditSpider(scrapy.Spider):
                                          meta={'base': url, 'index': index, 'username': username})
         except KeyError:
             self.logger.error('required argument missed')
+
+    def parse(self, response):
+        pass
 
     def link_parse(self, response):
         res_data = json.loads(response.body_as_unicode())

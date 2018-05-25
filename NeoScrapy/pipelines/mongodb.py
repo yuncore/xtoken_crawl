@@ -4,31 +4,27 @@
 #
 # Don't forget to add your pipeline to the ITEM_PIPELINES setting
 # See: http://doc.scrapy.org/en/latest/topics/item-pipeline.html
-import pymongo
 from datetime import datetime
-from NeoScrapy.db import NeoData
+from NeoScrapy.db import NeoData, CLIENT
 
 
 class MongoPipeline(object):
-    def __init__(self, mongo_uri, mongo_db, mongo_port, relation_db):
-        self.mongo_port = mongo_port
-        self.mongo_uri = mongo_uri
-        self.mongo_db = mongo_db
-        self.relation_db = relation_db
+    def __init__(self, mongo_db, relation_db):
+        self.MONGO_DATABASE = mongo_db
+        self.MONGO_RELATIONBASE = relation_db
+        self.client = CLIENT
+        self.db = self.client[self.MONGO_DATABASE]
+        self.relation_db = self.client[self.MONGO_RELATIONBASE]
 
     @classmethod
     def from_crawler(cls, crawler):
         return cls(
-            mongo_port=crawler.settings.get('MONGO_PORT'),
-            mongo_uri=crawler.settings.get('MONGO_URI'),
             mongo_db=crawler.settings.get('MONGO_DATABASE', 'items'),
             relation_db=crawler.settings.get('MONGO_RELATIONBASE')
         )
 
     def open_spider(self, spider):
-        self.client = pymongo.MongoClient(self.mongo_uri, self.mongo_port)
-        self.db = self.client[self.mongo_db]
-        self.relation_db = self.client[self.relation_db]
+        pass
 
     def close_spider(self, spider):
         self.client.close()

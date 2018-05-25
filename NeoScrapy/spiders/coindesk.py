@@ -3,7 +3,8 @@ import pymongo
 import time
 from datetime import datetime
 from lxml import html
-from NeoScrapy.settings import MONGO_URI, MONGO_PORT, MONGO_DATABASE
+from NeoScrapy.settings import MONGO_DATABASE
+from NeoScrapy.db import CLIENT
 from NeoScrapy.db import NeoData
 
 
@@ -26,7 +27,7 @@ class CoinDeskSpider(scrapy.Spider):
 
     def __init__(self, *args, **kwargs):
         super(CoinDeskSpider, self).__init__(*args, **kwargs)
-        self.client = pymongo.MongoClient(MONGO_URI, MONGO_PORT)
+        self.client = CLIENT
         self.db = self.client[MONGO_DATABASE]
         self.end_time = self.calc_latest_record()
         self.continue_flag = True

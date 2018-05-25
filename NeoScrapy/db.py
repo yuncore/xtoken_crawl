@@ -1,3 +1,13 @@
+from pymongo import MongoClient
+from NeoScrapy.settings import MONGO_URI, MONGO_PORT, MONGOUSER, MONGOPASSWORD
+CLIENT = MongoClient(MONGO_URI,
+                     MONGO_PORT,
+                     username=MONGOUSER,
+                     password=MONGOPASSWORD,
+                     authSource='admin',
+                     authMechanism='SCRAM-SHA-1')
+
+
 class NeoData:
     # config options
     APP_CONFIG = '_app_config_'
