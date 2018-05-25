@@ -15,3 +15,9 @@
 *.ntvs*
 *.njsproj
 *.sln
+NeoScrapy/__pycache__/
+NeoScrapy/downloadmiddlewares/__pycache__/
+NeoScrapy/pipelines/__pycache__/
+NeoScrapy/spidermiddlewares/__pycache__/
+NeoScrapy/spiders/__pycache__/
+NeoScrapy/utils/__pycache__/
