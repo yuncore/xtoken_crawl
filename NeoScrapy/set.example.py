@@ -8,25 +8,30 @@
 #     http://doc.scrapy.org/en/latest/topics/settings.html
 #     http://scrapy.readthedocs.org/en/latest/topics/downloader-middleware.html
 #     http://scrapy.readthedocs.org/en/latest/topics/spider-middleware.html
-
 BOT_NAME = 'NeoScrapy'
 
 SPIDER_MODULES = ['NeoScrapy.spiders']
 NEWSPIDER_MODULE = 'NeoScrapy.spiders'
 
-MONGO_URI = 'xxxx'
-MONGO_DATABASE = 'xxxxx'
-MONGO_STATBASE = 'xxxxxx'
-MONGO_RELATIONBASE = 'xxxxxx'
-MONGO_PORT = 27017
+# MONGO_URI = '192.168.1.222'
+# MONGO_PORT = 27017
 
-REDDIT_CLIENT_ID = 'htwdLJ6yD_O9oQ'
-REDDIT_SECRET_KEY = '3qyClBiaXZgZm1k7ScGBbzH20VQ'
-REDDIT_USER = 'divisey'
-REDDIT_PASSWORD = '19950626zqw'
+MONGO_URI = 'XXX'
+MONGO_PORT = 0000
+MONGOUSER = 'XXX'
+MONGOPASSWORD = 'XXX'
 
-GITHUB_CLIENT_ID = '8e9f08e4e318c7824a7d'
-GITHUB_SECRET = 'ea0029aa321894863089884f0756c7ed404da19a'
+MONGO_DATABASE = 'neo_crawl_data'
+MONGO_STATBASE = 'neo_stat_data'
+MONGO_RELATIONBASE = 'neo_relation_data'
+
+REDDIT_CLIENT_ID = 'XXXX'
+REDDIT_SECRET_KEY = 'XXX'
+REDDIT_USER = 'XXX'
+REDDIT_PASSWORD = 'XXX'
+
+GITHUB_CLIENT_ID = 'XXX'
+GITHUB_SECRET = 'XXX'
 
 IMAGES_STORE = 'E:\coinmarketcurrencylogo'
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
