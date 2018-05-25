@@ -23,3 +23,4 @@ NeoScrapy/utils/__pycache__/
 /scraped_data.json
 !/NeoScrapy/settings.py
 
+/.idea/workspace.xml
