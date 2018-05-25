@@ -3,7 +3,6 @@
 /dbs
 /eggs
 /logs
-/NeoScrapy/setting.py
 /project.egg-info
 /setup.py
 
@@ -21,3 +20,5 @@ NeoScrapy/pipelines/__pycache__/
 NeoScrapy/spidermiddlewares/__pycache__/
 NeoScrapy/spiders/__pycache__/
 NeoScrapy/utils/__pycache__/
+/scraped_data.json
+/NeoScrapy/settings.py
