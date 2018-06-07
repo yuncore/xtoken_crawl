@@ -2,7 +2,39 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" readonly="true" id="dbaa84f9-87cf-4b55-84ce-62916ac77421" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/NeoScrapy.iml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/markdown-navigator/profiles_settings.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/NeoScrapy/settings.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/lib/NeoScrapy/__init__.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/lib/NeoScrapy/command/__init__.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/lib/NeoScrapy/command/runner.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/lib/NeoScrapy/items.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/lib/NeoScrapy/middlewares.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/lib/NeoScrapy/pipelines.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/lib/NeoScrapy/settings.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/lib/NeoScrapy/spiders/__init__.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/lib/NeoScrapy/spiders/bitcointalk.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/lib/NeoScrapy/spiders/coinmarket.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/lib/NeoScrapy/spiders/tokenmarket.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dbs/NeoScrapy.db" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dbs/default.db" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/eggs/NeoScrapy/1511511049.egg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/logs/NeoScrapy/coinmarketcap/905dcd62d0ef11e7aae80025229ca8ce.log" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/logs/NeoScrapy/coinmarketcap/b6adecc8d0f011e7b6510025229ca8ce.log" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/logs/scrapy.log" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/project.egg-info/PKG-INFO" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/project.egg-info/SOURCES.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/project.egg-info/dependency_links.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/project.egg-info/entry_points.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/project.egg-info/top_level.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/setup.py" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/NeoScrapy/command/debugger.py" afterPath="$PROJECT_DIR$/NeoScrapy/command/debugger.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/NeoScrapy/db.py" afterPath="$PROJECT_DIR$/NeoScrapy/db.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/NeoScrapy/pipelines/mongodb.py" afterPath="$PROJECT_DIR$/NeoScrapy/pipelines/mongodb.py" />
     </list>
     <ignored path="../NeoDataCrawl/.idea/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -20,17 +52,19 @@
     <SUITE FILE_PATH="coverage/NeoScrapy$icoholder.coverage" NAME="icoholder Coverage Results" MODIFIED="1522144778460" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/NeoScrapy/spiders" />
     <SUITE FILE_PATH="coverage/NeoScrapy$debug.coverage" NAME="debug Coverage Results" MODIFIED="1511514186270" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/NeoScrapy" />
     <SUITE FILE_PATH="coverage/NeoScrapy$coindesk.coverage" NAME="coindesk Coverage Results" MODIFIED="1520306124191" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/NeoScrapy/spiders" />
-    <SUITE FILE_PATH="coverage/NeoScrapy$debugger.coverage" NAME="debugger Coverage Results" MODIFIED="1527217228221" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/NeoScrapy/command" />
+    <SUITE FILE_PATH="coverage/NeoScrapy$debugger.coverage" NAME="debugger Coverage Results" MODIFIED="1527850156448" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/NeoScrapy/command" />
     <SUITE FILE_PATH="coverage/NeoScrapy$github.coverage" NAME="github Coverage Results" MODIFIED="1515753480449" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/NeoScrapy/spiders" />
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="set.example.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/NeoScrapy/set.example.py">
+      <file leaf-file-name="ethfans.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/NeoScrapy/spiders/ethfans.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="544">
-              <caret line="32" column="23" lean-forward="false" selection-start-line="32" selection-start-column="23" selection-end-line="32" selection-end-column="23" />
-              <folding />
+            <state relative-caret-position="-391">
+              <caret line="12" column="26" lean-forward="true" selection-start-line="12" selection-start-column="26" selection-end-line="12" selection-end-column="26" />
+              <folding>
+                <element signature="e#0#13#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -38,29 +72,31 @@
       <file leaf-file-name=".gitignore" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/.gitignore">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="7" column="0" lean-forward="true" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+            <state relative-caret-position="236">
+              <caret line="26" column="0" lean-forward="false" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="timeUtil.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/NeoScrapy/utils/timeUtil.py">
+      <file leaf-file-name="debugger.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/NeoScrapy/command/debugger.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="289">
-              <caret line="18" column="42" lean-forward="true" selection-start-line="18" selection-start-column="42" selection-end-line="18" selection-end-column="42" />
+            <state relative-caret-position="255">
+              <caret line="15" column="28" lean-forward="false" selection-start-line="15" selection-start-column="28" selection-end-line="15" selection-end-column="28" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="settings.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/NeoScrapy/settings.py">
+      <file leaf-file-name="coindesk.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/NeoScrapy/spiders/coindesk.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="357">
-              <caret line="21" column="26" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="121" selection-end-column="0" />
-              <folding />
+            <state relative-caret-position="986">
+              <caret line="65" column="30" lean-forward="false" selection-start-line="65" selection-start-column="8" selection-end-line="65" selection-end-column="30" />
+              <folding>
+                <element signature="e#0#13#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -89,6 +125,7 @@
       <find>repos_parse</find>
       <find>MONGO_PORT</find>
       <find>pymongo</find>
+      <find>time_format</find>
     </findStrings>
     <replaceStrings>
       <replace>continue</replace>
@@ -135,18 +172,19 @@
         <option value="$PROJECT_DIR$/NeoScrapy/downloadmiddlewares/reddit_token_check.py" />
         <option value="$PROJECT_DIR$/NeoScrapy/utils/timeUtil.py" />
         <option value="$PROJECT_DIR$/NeoScrapy/settings.py" />
-        <option value="$PROJECT_DIR$/NeoScrapy/db.py" />
         <option value="$PROJECT_DIR$/NeoScrapy/spiders/bitcointalk.py" />
-        <option value="$PROJECT_DIR$/NeoScrapy/spiders/coindesk.py" />
         <option value="$PROJECT_DIR$/NeoScrapy/spiders/coinmarket.py" />
         <option value="$PROJECT_DIR$/NeoScrapy/spiders/github.py" />
         <option value="$PROJECT_DIR$/NeoScrapy/spiders/icoholder.py" />
         <option value="$PROJECT_DIR$/NeoScrapy/spiders/reddit.py" />
-        <option value="$PROJECT_DIR$/NeoScrapy/pipelines/mongodb.py" />
-        <option value="$PROJECT_DIR$/NeoScrapy/command/debugger.py" />
         <option value="$PROJECT_DIR$/NeoScrapy/downloadmiddlewares/http_proxy.py" />
         <option value="$PROJECT_DIR$/requirements.txt" />
         <option value="$PROJECT_DIR$/NeoScrapy/set.example.py" />
+        <option value="$PROJECT_DIR$/NeoScrapy/command/debugger.py" />
+        <option value="$PROJECT_DIR$/NeoScrapy/spiders/coindesk.py" />
+        <option value="$PROJECT_DIR$/NeoScrapy/db.py" />
+        <option value="$PROJECT_DIR$/NeoScrapy/pipelines/mongodb.py" />
+        <option value="$PROJECT_DIR$/NeoScrapy/spiders/ethfans.py" />
         <option value="$PROJECT_DIR$/.gitignore" />
       </list>
     </option>
@@ -179,6 +217,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -186,11 +225,33 @@
               <item name="NeoScrapy" type="b2602c69:ProjectViewProjectNode" />
               <item name="NeoScrapy" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="NeoScrapy" type="b2602c69:ProjectViewProjectNode" />
+              <item name="NeoScrapy" type="462c0819:PsiDirectoryNode" />
+              <item name="NeoScrapy" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="NeoScrapy" type="b2602c69:ProjectViewProjectNode" />
+              <item name="NeoScrapy" type="462c0819:PsiDirectoryNode" />
+              <item name="NeoScrapy" type="462c0819:PsiDirectoryNode" />
+              <item name="command" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="NeoScrapy" type="b2602c69:ProjectViewProjectNode" />
+              <item name="NeoScrapy" type="462c0819:PsiDirectoryNode" />
+              <item name="NeoScrapy" type="462c0819:PsiDirectoryNode" />
+              <item name="pipelines" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="NeoScrapy" type="b2602c69:ProjectViewProjectNode" />
+              <item name="NeoScrapy" type="462c0819:PsiDirectoryNode" />
+              <item name="NeoScrapy" type="462c0819:PsiDirectoryNode" />
+              <item name="spiders" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
       <pane id="Scratches" />
     </panes>
   </component>
@@ -463,7 +524,21 @@
       <option name="project" value="LOCAL" />
       <updated>1527228119655</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="change ignore">
+      <created>1527228125776</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1527228125776</updated>
+    </task>
+    <task id="LOCAL-00018" summary="add ethfans spider">
+      <created>1528366987367</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1528366987367</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TodoView">
@@ -478,17 +553,17 @@
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1732224" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18003026" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32900432" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.5735931" sideWeight="0.50852877" order="0" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.28171334" sideWeight="0.505295" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39209226" sideWeight="0.4914712" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.4184514" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.64415157" sideWeight="0.4978678" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.54859966" sideWeight="0.4914712" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.45963755" sideWeight="0.4978678" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.7874794" sideWeight="0.4978678" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.37067544" sideWeight="0.494705" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.49917626" sideWeight="0.4968017" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32142857" sideWeight="0.4968017" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Data View" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -534,17 +609,16 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="update mongodb client, add auth." />
     <MESSAGE value="change ignore" />
-    <option name="LAST_COMMIT_MESSAGE" value="change ignore" />
+    <MESSAGE value="add ethfans spider" />
+    <option name="LAST_COMMIT_MESSAGE" value="add ethfans spider" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="123" />
+      <option name="time" value="129" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/NeoScrapy/spiders/test.html" />
-    <entry file="file://$PROJECT_DIR$/NeoScrapy/docs/test.html" />
     <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python35/Lib/site-packages/twisted/internet/task.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="349">
@@ -662,41 +736,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/NeoScrapy/spiders/coindesk.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-51">
-          <caret line="7" column="32" lean-forward="true" selection-start-line="7" selection-start-column="32" selection-end-line="7" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/NeoScrapy/spiders/bitcointalk.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="26" lean-forward="false" selection-start-line="4" selection-start-column="26" selection-end-line="4" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/NeoScrapy/spiders/coinmarket.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1054">
-          <caret line="62" column="78" lean-forward="true" selection-start-line="62" selection-start-column="78" selection-end-line="62" selection-end-column="78" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/NeoScrapy/spiders/github.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="36" lean-forward="true" selection-start-line="8" selection-start-column="36" selection-end-line="8" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/NeoScrapy/spiders/reddit.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1241">
           <caret line="77" column="12" lean-forward="false" selection-start-line="77" selection-start-column="12" selection-end-line="77" selection-end-column="12" />
-          <folding>
-            <element signature="e#0#45#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -704,25 +747,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#13#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/NeoScrapy/spiders/icoholder.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="5" column="30" lean-forward="false" selection-start-line="5" selection-start-column="30" selection-end-line="5" selection-end-column="30" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/NeoScrapy/command/debugger.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" column="0" lean-forward="false" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -730,17 +754,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
           <caret line="5" column="0" lean-forward="false" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/NeoScrapy/pipelines/mongodb.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="64" lean-forward="false" selection-start-line="5" selection-start-column="64" selection-end-line="5" selection-end-column="64" />
-          <folding>
-            <element signature="e#192#221#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -748,7 +761,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
           <caret line="1" column="0" lean-forward="true" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -756,7 +768,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
           <caret line="5" column="0" lean-forward="false" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -764,7 +775,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -772,7 +782,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -780,7 +789,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-340">
           <caret line="10" column="34" lean-forward="false" selection-start-line="10" selection-start-column="34" selection-end-line="10" selection-end-column="34" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -788,29 +796,31 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/NeoScrapy/db.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" column="78" lean-forward="false" selection-start-line="1" selection-start-column="78" selection-end-line="1" selection-end-column="78" />
-          <folding>
-            <element signature="e#0#31#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/NeoScrapy/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="21" column="26" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="121" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/NeoScrapy/utils/timeUtil.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="18" column="42" lean-forward="false" selection-start-line="18" selection-start-column="42" selection-end-line="18" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/NeoScrapy/spiders/github.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="8" column="36" lean-forward="false" selection-start-line="8" selection-start-column="36" selection-end-line="8" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.git/info/exclude">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -822,22 +832,84 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="544">
           <caret line="32" column="23" lean-forward="false" selection-start-line="32" selection-start-column="23" selection-end-line="32" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/NeoScrapy/spiders/coinmarket.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="547">
+          <caret line="62" column="78" lean-forward="true" selection-start-line="62" selection-start-column="78" selection-end-line="62" selection-end-column="78" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/NeoScrapy/spiders/icoholder.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="50" column="12" lean-forward="true" selection-start-line="50" selection-start-column="12" selection-end-line="50" selection-end-column="63" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/NeoScrapy/spiders/bitcointalk.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-595">
+          <caret line="5" column="21" lean-forward="true" selection-start-line="5" selection-start-column="21" selection-end-line="5" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/NeoScrapy/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="161">
+          <caret line="23" column="0" lean-forward="false" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/NeoScrapy/db.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="10" column="6" lean-forward="false" selection-start-line="10" selection-start-column="6" selection-end-line="10" selection-end-column="6" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/NeoScrapy/utils/timeUtil.py">
+    <entry file="file://$PROJECT_DIR$/NeoScrapy/pipelines/mongodb.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="18" column="42" lean-forward="true" selection-start-line="18" selection-start-column="42" selection-end-line="18" selection-end-column="42" />
+        <state relative-caret-position="424">
+          <caret line="99" column="28" lean-forward="false" selection-start-line="99" selection-start-column="28" selection-end-line="99" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/NeoScrapy/spiders/coindesk.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="986">
+          <caret line="65" column="30" lean-forward="false" selection-start-line="65" selection-start-column="8" selection-end-line="65" selection-end-column="30" />
+          <folding>
+            <element signature="e#0#13#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/NeoScrapy/command/debugger.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="15" column="28" lean-forward="false" selection-start-line="15" selection-start-column="28" selection-end-line="15" selection-end-column="28" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/NeoScrapy/spiders/ethfans.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-391">
+          <caret line="12" column="26" lean-forward="true" selection-start-line="12" selection-start-column="26" selection-end-line="12" selection-end-column="26" />
+          <folding>
+            <element signature="e#0#13#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="0" lean-forward="true" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+        <state relative-caret-position="236">
+          <caret line="26" column="0" lean-forward="false" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
           <folding />
         </state>
       </provider>

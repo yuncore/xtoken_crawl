@@ -50,6 +50,8 @@ class NeoData:
 
     ICOHOLDER_BASE = 'icoholder_base'             # 从ico holder中获取的货币ico筹集的时间和总金额
 
+    ETHFANS = 'ethfans'                           # ethfans中获取的数据
+
     # relation collections
     RELATION_CURRENCY_REDDIT = 'relation_currency_reddit'  # 保存reddit和currency之间的对应关系
     RELAITON_CURRENCY_GITHUB = 'relation_currency_github'  # 保存gitbub和currency之间的对应关系

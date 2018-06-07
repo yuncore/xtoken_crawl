@@ -8,8 +8,9 @@ from scrapy import cmdline
 # cmd = 'scrapy crawl reddit -a func=LINK -a srname=NEO'
 # cmd = 'scrapy crawl reddit -a func=COMMENT -a srname=garlicoin'
 # cmd = 'scrapy crawl coinmarketcap -a func=TOTAL_MARKET'
-cmd = 'scrapy crawl coinmarketcap -a func=HISTORY_PRICE -a currency_id=gbcgoldcoin'
+# cmd = 'scrapy crawl coinmarketcap -a func=HISTORY_PRICE -a currency_id=gbcgoldcoin'
 # cmd = "scrapy crawl github -a func=PROJECT -a full_name=ethereum/ethereumj -a with_user=True"
 # cmd = 'scrapy crawl coindesk'
 # cmd = 'scrapy crawl icoholder'
+cmd = 'scrapy crawl ethfans'
 cmdline.execute(cmd.split())

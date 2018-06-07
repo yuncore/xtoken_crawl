@@ -43,6 +43,8 @@ class MongoPipeline(object):
             self.save_btt_history(item)
         if cls == 'CoinDeskItem':
             self.save_coindesk_news(item)
+        if cls == 'EthfansItems':
+            self.save_ethfans_news(item)
         return item
 
     def save_coinmarket(self, item):
@@ -93,3 +95,6 @@ class MongoPipeline(object):
 
     def save_coindesk_news(self, item):
         self.db[NeoData.COINDESK_NEWS].find_one_and_update({'_id': item['id']}, {'$set': item}, upsert=True)
+
+    def save_ethfans_news(self, item):
+        self.db[NeoData.ETHFANS].find_one_and_update({'_id': item['url']}, {'$set': item}, upsert=True)
